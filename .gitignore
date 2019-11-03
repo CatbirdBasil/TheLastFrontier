@@ -1,9 +1,14 @@
-[Ll]ibrary/
-[Tt]emp/
-[Oo]bj/
-[Bb]uild/
-[Bb]uilds/
-Assets/AssetStoreTools*
+The Last Frontier/[Ll]ibrary/
+The Last Frontier/[Tt]emp/
+The Last Frontier/[Oo]bj/
+The Last Frontier/TLFGameLogic/[Oo]bj/
+The Last Frontier/TLFGameLogic/[Bb]in/
+The Last Frontier/[Bb]uild/
+The Last Frontier/[Bb]uilds/
+The Last Frontier/Assets/AssetStoreTools*
+
+# Idea directory
+.idea/
 
 # Visual Studio cache directory
 .vs/
@@ -34,3 +39,34 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+# Excluded files
+!The Last Frontier/TLFGameLogic/TLFGameLogic.csproj
+!The Last Frontier/TLFGameLogic/TLFGameLogic.sln
+
+# Other 
+*_i.c
+*_p.c
+*_i.h
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.log
+*.svclog
+*.scc
