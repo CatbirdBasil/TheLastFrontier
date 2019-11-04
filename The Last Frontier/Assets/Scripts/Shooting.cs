@@ -6,6 +6,7 @@ using UnityEngine;
 
 using TLFGameLogic;
 using TLFGameLogic.Model;
+using TLFUILogic;
 using Zenject;
 
 public class Shooting : MonoBehaviour
@@ -38,7 +39,7 @@ public class Shooting : MonoBehaviour
         //CurrentCannonLoadout loadout = loadoutProvider.GetLoadout();
         //Debug.Log("Damage = " + loadout.Damage);
 
-        LevelInfo levelInfo = levelInfoProvider.Get(1);
+        LevelInfo levelInfo = levelInfoProvider.GetLevel(1);
         Debug.Log("LevelInfo = " + levelInfo.EnemiesSpawnInfo[0].Enemy.Name);
         Enemy enemy = levelInfo.EnemiesSpawnInfo[0].Enemy;
         
@@ -49,6 +50,8 @@ public class Shooting : MonoBehaviour
         Debug.Log("HP = " + enemy.Health);
         enemy.TakeDamage(51f);
         Debug.Log("HP = " + enemy.Health);
+
+
 
     }
 }

@@ -13,7 +13,7 @@ namespace TLFGameLogic.Config
             bigWaveStartTimes.Add(30f);
             levelInfo.BigWaveStartTimes = bigWaveStartTimes;
 
-            levelInfo.AddEnemySpawnInfo(3f, SpawnPoint.A, new SmallSlimeEnemy());
+            levelInfo.AddEnemySpawnInfo(3f, SpawnPoint.A, EnemyFactory.CreateEnemy(EnemyType.SmallSlime));
             return levelInfo;
         }
 

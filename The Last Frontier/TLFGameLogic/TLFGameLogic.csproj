@@ -40,6 +40,7 @@
   <ItemGroup>
     <Compile Include="Config\DemoCannon.cs" />
     <Compile Include="Config\Levels.cs" />
+    <Compile Include="Factory\EnemyFactory.cs" />
     <Compile Include="LevelState\CurrentCannonLoadoutProvider.cs" />
     <Compile Include="LevelState\ILevelInfoProvider.cs" />
     <Compile Include="LevelState\SimpleCurrentCannonLoadoutProvider.cs" />
@@ -49,15 +50,12 @@
     <Compile Include="Model\CannonData\CannonBase.cs" />
     <Compile Include="Model\CannonData\ProjectileType.cs" />
     <Compile Include="Model\EnemyData\Enemy.cs" />
-    <Compile Include="Model\EnemyData\SmallSlimeEnemy.cs" />
+    <Compile Include="Model\EnemyData\EnemyType.cs" />
     <Compile Include="Model\LevelData\CurrentCannonLoadout.cs" />
     <Compile Include="Model\LevelData\EnemySpawnInfo.cs" />
     <Compile Include="Model\LevelData\LevelInfo.cs" />
     <Compile Include="Model\LevelData\SpawnPoint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Factory" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
