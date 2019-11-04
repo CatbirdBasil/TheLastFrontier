@@ -45,28 +45,29 @@ sysinfo.txt
 !The Last Frontier/TLFGameLogic/TLFGameLogic.sln
 
 # Other 
-*_i.c
-*_p.c
-*_i.h
-*.ilk
-*.meta
-*.obj
-*.pch
-*.pdb
-*.pgc
-*.pgd
-*.rsp
-*.sbr
-*.tlb
-*.tli
-*.tlh
-*.tmp
-*.tmp_proj
-*.log
-*.vspscc
-*.vssscc
-.builds
-*.pidb
-*.log
-*.svclog
-*.scc
+The Last Frontier/TLFGameLogic/*_i.c
+The Last Frontier/TLFGameLogic/*_p.c
+The Last Frontier/TLFGameLogic/*_i.h
+The Last Frontier/TLFGameLogic/*.ilk
+The Last Frontier/TLFGameLogic/*.meta
+The Last Frontier/TLFGameLogic/*.obj
+The Last Frontier/TLFGameLogic/*.pch
+The Last Frontier/TLFGameLogic/*.pdb
+The Last Frontier/TLFGameLogic/*.pgc
+The Last Frontier/TLFGameLogic/*.pgd
+The Last Frontier/TLFGameLogic/*.rsp
+The Last Frontier/TLFGameLogic/*.sbr
+The Last Frontier/TLFGameLogic/*.tlb
+The Last Frontier/TLFGameLogic/*.tli
+The Last Frontier/TLFGameLogic/*.tlh
+The Last Frontier/TLFGameLogic/*.tmp
+The Last Frontier/TLFGameLogic/*.tmp_proj
+The Last Frontier/TLFGameLogic/*.log
+The Last Frontier/TLFGameLogic/*.vspscc
+The Last Frontier/TLFGameLogic/*.vssscc
+The Last Frontier/TLFGameLogic/.builds
+The Last Frontier/TLFGameLogic/*.pidb
+The Last Frontier/TLFGameLogic/*.log
+The Last Frontier/TLFGameLogic/*.svclog
+The Last Frontier/TLFGameLogic/*.scc
+The Last Frontier/TLFGameLogic/*.patch
