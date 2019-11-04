@@ -1,17 +1,16 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using ModestTree;
 using UnityEngine;
 
 using TLFGameLogic;
 using TLFGameLogic.Model;
 using TLFUILogic;
 using Zenject;
+using Random = System.Random;
 
 public class Shooting : MonoBehaviour
 {
     public Transform firePoint;
+    public Transform SpawnPoint;
     public GameObject bulletPrefab;
 
     [Inject]
@@ -26,6 +25,12 @@ public class Shooting : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
+            SimpleEnemyFactory simpleEnemyFactory = new SimpleEnemyFactory();
+            Enemy enemy = levelInfoProvider.GetLevel(1).EnemiesSpawnInfo[0].Enemy;
+            Random random = new Random();
+            SpawnPoint.position = new Vector3(13, 0,random.Next(-5,5) );
+            simpleEnemyFactory.getEnemy(enemy, SpawnPoint);
+            //levelInfoProvider.GetLevel(1).EnemiesSpawnInfo[0].SpawnPoint
             Shoot();
         }
     } 

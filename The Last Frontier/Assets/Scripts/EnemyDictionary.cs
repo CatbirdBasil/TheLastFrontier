@@ -5,7 +5,7 @@ using Zenject;
 
 namespace TLFUILogic
 {
-    public class DictionaryEnemy : MonoBehaviour
+    public class EnemyDictionary : MonoBehaviour
     {
 
         [SerializeField] private  GameObject SmallSlimePrefab;
