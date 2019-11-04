@@ -1,9 +1,10 @@
 using TLFGameLogic.Model;
+using UnityEngine;
 
 namespace TLFUILogic
 {
     public interface IEnemyFactory
     {
-         EnemyView getEnemy(Enemy enemy);
+        EnemyView GetEnemy(Enemy enemy, Transform spawnPoint);
     }
 }
