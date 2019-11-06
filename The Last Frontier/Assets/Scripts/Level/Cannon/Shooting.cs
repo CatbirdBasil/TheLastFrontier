@@ -26,7 +26,8 @@ public class Shooting : MonoBehaviour
             var enemy = levelInfoProvider.GetLevel(1).EnemiesSpawnInfo[0].Enemy;
             var random = new Random();
             SpawnPoint.position = new Vector3(13, 0, random.Next(-5, 5));
-            _enemyFactory.GetEnemy(enemy, SpawnPoint);
+            _enemyFactory.GetEnemy(enemy, levelInfoProvider.GetLevel(1).EnemiesSpawnInfo[0].SpawnPoint);
+
             //levelInfoProvider.GetLevel(1).EnemiesSpawnInfo[0].SpawnPoint
             Shoot();
         }
@@ -47,10 +48,10 @@ public class Shooting : MonoBehaviour
 
         levelInfo.AllEnemiesDead += delegate { Debug.Log("ALL DEAD"); };
 
-        Debug.Log("HP = " + enemy.Health);
+        /*Debug.Log("HP = " + enemy.Health);
         enemy.TakeDamage(10f);
         Debug.Log("HP = " + enemy.Health);
         enemy.TakeDamage(51f);
-        Debug.Log("HP = " + enemy.Health);
+        Debug.Log("HP = " + enemy.Health);*/
     }
 }

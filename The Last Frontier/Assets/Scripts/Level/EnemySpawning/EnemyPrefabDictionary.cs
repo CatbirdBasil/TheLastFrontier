@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace TLFUILogic
 {
-    public class EnemyPrefabDictionary : ScriptableObject
+    public class EnemyPrefabDictionary
     {
         private const string PrefabRoot = "Prefabs/Enemies/";
         private const string SmallSlimeName = "SmallSlime";

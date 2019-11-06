@@ -652,13 +652,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1234134870}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f5c40959400ea146bf828429d4a3034, type: 3}
+  m_Script: {fileID: 11500000, guid: 450075e45476cde4b889905b41cd8ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firePoint: {fileID: 1030642707}
+  bulletForce: 20
   bulletPrefab: {fileID: 2401861402377281109, guid: 7fb8cd43e72957b4eb0127c4eb7ffa62,
     type: 3}
-  bulletForce: 20
+  firePoint: {fileID: 1030642707}
+  SpawnPoint: {fileID: 1030642707}
 --- !u!1 &1528176035
 GameObject:
   m_ObjectHideFlags: 0

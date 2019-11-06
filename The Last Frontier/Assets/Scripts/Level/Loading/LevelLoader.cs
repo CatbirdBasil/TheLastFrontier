@@ -1,11 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+using Level.DTO;
 using Level.LevelEventArgs;
 using TLFGameLogic;
+using TLFGameLogic.Model.LevelData;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Zenject;
 
-public class LevelLoader : MonoBehaviour
+public class LevelLoader : ScriptableObject
 {
     [Inject] private ILevelInfoProvider _levelInfoProvider;
 
@@ -14,9 +17,11 @@ public class LevelLoader : MonoBehaviour
     public event EventHandler LoadingCompleted = delegate { };
     public event EventHandler<CurrentCannonLoadoutEventArgs> CurrentCannonLoadoutLoadingCompleted = delegate { };
     public event EventHandler<LevelInfoEventArgs> LevelInfoLoadingCompleted = delegate { };
+    public event EventHandler<SpawnPointEventArgs> SpawnPointsLoadingCompleted = delegate { };
 
     private void OnEnable()
     {
+        Debug.Log("LevelLoader enabled");
         SceneManager.sceneLoaded += InstantiateLevelData;
     }
 
@@ -29,6 +34,7 @@ public class LevelLoader : MonoBehaviour
     {
         var currentLevel = 1;
 
+        LoadSpawnPoints();
         LoadCurrentCannonLoadout();
         LoadLevelInfo(currentLevel);
         LoadingCompleted(this, EventArgs.Empty);
@@ -50,5 +56,24 @@ public class LevelLoader : MonoBehaviour
         // Enemies and etc instantiation logic
 
         LevelInfoLoadingCompleted(this, new LevelInfoEventArgs(levelInfo));
+    }
+
+    private void LoadSpawnPoints()
+    {
+        var spawnPointDtos = new List<SpawnPointDTO>(7);
+
+        var spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
+
+        Array.Sort(spawnPoints, (x, y) => x.transform.up.y.CompareTo(y.transform.up.y));
+
+        spawnPointDtos.Add(new SpawnPointDTO(spawnPoints[0].transform, SpawnPoint.A));
+        spawnPointDtos.Add(new SpawnPointDTO(spawnPoints[1].transform, SpawnPoint.B));
+        spawnPointDtos.Add(new SpawnPointDTO(spawnPoints[2].transform, SpawnPoint.C));
+        spawnPointDtos.Add(new SpawnPointDTO(spawnPoints[3].transform, SpawnPoint.D));
+        spawnPointDtos.Add(new SpawnPointDTO(spawnPoints[4].transform, SpawnPoint.E));
+        spawnPointDtos.Add(new SpawnPointDTO(spawnPoints[5].transform, SpawnPoint.F));
+        spawnPointDtos.Add(new SpawnPointDTO(spawnPoints[6].transform, SpawnPoint.G));
+
+        SpawnPointsLoadingCompleted(this, new SpawnPointEventArgs(spawnPointDtos));
     }
 }

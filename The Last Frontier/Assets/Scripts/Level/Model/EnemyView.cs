@@ -8,12 +8,8 @@ namespace TLFUILogic
         public Enemy Enemy { get; set; }
 
         public GameObject EnemyGameObject { get; set; }
-//
-//        public EnemyView(Enemy enemy, GameObject gameObject)
-//        {
-//            _enemy = enemy;
-//            EnemyObject = gameObject;
-//        }
+
+        public Rigidbody2D Rigidbody { get; set; }
 
         public void Move(Vector2 target)
         {
