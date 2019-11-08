@@ -38,8 +38,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+      <Compile Include="Config\CannonConfig.cs"/>
     <Compile Include="Config\DemoCannon.cs" />
     <Compile Include="Config\Levels.cs" />
+      <Compile Include="Factory\CannonPartFactory.cs"/>
     <Compile Include="Factory\EnemyFactory.cs" />
     <Compile Include="LevelState\CurrentCannonLoadoutProvider.cs" />
     <Compile Include="LevelState\ILevelInfoProvider.cs" />
@@ -47,10 +49,13 @@
     <Compile Include="LevelState\SimpleLevelInfoProvider.cs" />
     <Compile Include="Model\CannonData\Ammo.cs" />
     <Compile Include="Model\CannonData\Cannon.cs" />
+      <Compile Include="Model\CannonData\CannonBarrel.cs"/>
     <Compile Include="Model\CannonData\CannonBase.cs" />
-    <Compile Include="Model\CannonData\CannonFragment.cs" />
-    <Compile Include="Model\CannonData\ProjectileType.cs" />
-    <Compile Include="Model\CannonData\TypeOfCannonBase.cs" />
+      <Compile Include="Model\CannonData\CannonPart.cs"/>
+      <Compile Include="Model\CannonData\Enum\CannonBarrelType.cs"/>
+      <Compile Include="Model\CannonData\Enum\ProjectileType.cs"/>
+      <Compile Include="Model\CannonData\Enum\Rang.cs"/>
+      <Compile Include="Model\CannonData\Enum\CannonBaseType.cs"/>
     <Compile Include="Model\EnemyData\Enemy.cs" />
     <Compile Include="Model\EnemyData\EnemyType.cs" />
     <Compile Include="Model\LevelData\CurrentCannonLoadout.cs" />

@@ -2,10 +2,10 @@ namespace TLFUILogic
 {
     public class PlayerDataForSafe
     {
+        public int[] BaseFragments;
         public int[] Level;
         public int Money;
         public int SpecialMoney;
-        public int[] BaseFragments;
 
         public PlayerDataForSafe(PlayerData playerData)
         {
@@ -13,18 +13,12 @@ namespace TLFUILogic
             SpecialMoney = playerData.specialMoney;
             //add levels
             Level = new int[playerData.level.Count];
-            for (int i = 0; i < BaseFragments.Length; i++)
-            {
-                Level[i] = (int) playerData.level[i];
-            }
+            for (var i = 0; i < BaseFragments.Length; i++) Level[i] = playerData.level[i];
 
             //and inventory 
             BaseFragments = new int[playerData.BaseCannonFragments.Count];
-            for (int i = 0; i < BaseFragments.Length; i++)
-            {
-                BaseFragments[i] = (int) playerData.BaseCannonFragments[i].TypeOfCannonBase;
-            }
+            for (var i = 0; i < BaseFragments.Length; i++)
+                BaseFragments[i] = (int) playerData.BaseCannonFragments[i].CannonBaseType;
         }
-
     }
 }
