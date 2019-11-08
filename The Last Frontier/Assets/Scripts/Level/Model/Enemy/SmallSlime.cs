@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace TLFUILogic
 {
-    public class SmallSlime : EnemyView
+    public class SmallSlime : EnemyViewModel
     {
         public SmallSlime(Enemy enemy, GameObject gameObject) //: base(enemy, gameObject)
         {

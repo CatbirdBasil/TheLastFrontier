@@ -26,7 +26,7 @@ public class Shooting : MonoBehaviour
             var enemy = levelInfoProvider.GetLevel(1).EnemiesSpawnInfo[0].Enemy;
             var random = new Random();
             SpawnPoint.position = new Vector3(13, 0, random.Next(-5, 5));
-            _enemyFactory.GetEnemy(enemy, levelInfoProvider.GetLevel(1).EnemiesSpawnInfo[0].SpawnPoint);
+            //_enemyFactory.GetEnemy(enemy, levelInfoProvider.GetLevel(1).EnemiesSpawnInfo[0].SpawnPoint);
 
             //levelInfoProvider.GetLevel(1).EnemiesSpawnInfo[0].SpawnPoint
             Shoot();

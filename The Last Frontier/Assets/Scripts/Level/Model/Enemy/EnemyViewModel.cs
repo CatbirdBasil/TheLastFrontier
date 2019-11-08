@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace TLFUILogic
 {
-    public class EnemyView : MonoBehaviour
+    public class EnemyViewModel : MonoBehaviour
     {
         public Enemy Enemy { get; set; }
 

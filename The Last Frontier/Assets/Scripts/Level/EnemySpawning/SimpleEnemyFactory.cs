@@ -1,6 +1,6 @@
-using Level.EnemySpawning;
+using System;
+using System.Collections.Generic;
 using TLFGameLogic.Model;
-using TLFGameLogic.Model.LevelData;
 using UnityEngine;
 using Zenject;
 
@@ -8,24 +8,41 @@ namespace TLFUILogic
 {
     public class SimpleEnemyFactory : ScriptableObject, IEnemyFactory
     {
+        private List<EnemyViewModel> _createdEnemies;
         [Inject] private EnemyPrefabDictionary _enemyPrefabDictionary;
-        [Inject] private SpawnPointResolver _spawnPointResolver;
 
-        public EnemyView GetEnemy(Enemy enemy, SpawnPoint spawnPoint)
+        public void WarmUp(Dictionary<EnemyType, int> estimatedEnemiesOnScreen)
+        {
+            var estimatedMax = 0;
+            foreach (var estimated in estimatedEnemiesOnScreen.Values) estimatedMax += estimated;
+
+            _createdEnemies = new List<EnemyViewModel>(estimatedMax);
+        }
+
+        public EnemyViewModel GetEnemy(Enemy enemy)
         {
             var prefab = _enemyPrefabDictionary.GetEnemyPrefab(enemy.EnemyType);
+            var enemyGameObject = Instantiate(prefab);
+            var enemyViewModel = enemyGameObject.AddComponent<EnemyViewModel>();
 
-            var spawnPointTransform = _spawnPointResolver.GetSpawnPointTransform(spawnPoint);
-            var enemyModel = Instantiate(_enemyPrefabDictionary.GetEnemyPrefab(EnemyType.SmallSlime),
-                spawnPointTransform.position, spawnPointTransform.rotation);
-            var enemyView = enemyModel.AddComponent<EnemyView>();
+            enemyViewModel.EnemyGameObject = enemyGameObject;
+            enemyViewModel.Enemy = enemy;
+            enemyViewModel.Rigidbody = enemyGameObject.GetComponent<Rigidbody2D>();
 
-            enemyView.EnemyGameObject = enemyModel;
-            enemyView.Enemy = enemy;
-            enemyView.Rigidbody = enemyModel.GetComponent<Rigidbody2D>();
+            _createdEnemies.Add(enemyViewModel);
+            enemy.LethalDamage += EnemyOnLethalDamage;
+//            enemyViewModel.Rigidbody.AddForce(-spawnPointTransform.right * enemy.Speed * 10f, ForceMode2D.Force);
+            return enemyViewModel;
+        }
 
-//            enemyView.Rigidbody.AddForce(-spawnPointTransform.right * enemy.Speed * 10f, ForceMode2D.Force);
-            return enemyView;
+        private void EnemyOnLethalDamage(object sender, EventArgs e)
+        {
+            if (sender is Enemy)
+            {
+                var enemyViewModel = _createdEnemies.Find(x => x.Enemy.Equals(sender as Enemy));
+                _createdEnemies.Remove(enemyViewModel);
+                Destroy(enemyViewModel.EnemyGameObject);
+            }
         }
     }
 }

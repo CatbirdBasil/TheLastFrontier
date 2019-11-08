@@ -9,11 +9,20 @@ namespace TLFGameLogic.Config
         private static LevelInfo Level1()
         {
             var levelInfo = new LevelInfo();
-            var bigWaveStartTimes = new List<float>(1);
-            bigWaveStartTimes.Add(30f);
-            levelInfo.BigWaveStartTimes = bigWaveStartTimes;
+            levelInfo.BigWaveStartTimes = new List<float>
+            {
+                30f
+            };
 
+            levelInfo.EstimatedMaxEnemiesOnScreen = new Dictionary<EnemyType, int>
+            {
+                {EnemyType.SmallSlime, 14}
+            };
+            
             levelInfo.AddEnemySpawnInfo(3f, SpawnPoint.A, EnemyFactory.CreateEnemy(EnemyType.SmallSlime));
+            levelInfo.AddEnemySpawnInfo(3f, SpawnPoint.G, EnemyFactory.CreateEnemy(EnemyType.SmallSlime));
+            levelInfo.AddEnemySpawnInfo(6f, SpawnPoint.C, EnemyFactory.CreateEnemy(EnemyType.SmallSlime));
+
             return levelInfo;
         }
 

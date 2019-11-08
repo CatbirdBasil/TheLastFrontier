@@ -4,14 +4,16 @@ using Level.DTO;
 using Level.LevelEventArgs;
 using TLFGameLogic;
 using TLFGameLogic.Model.LevelData;
+using TLFUILogic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Zenject;
 
+//TODO Refactor
 public class LevelLoader : ScriptableObject
 {
+    [Inject] private IEnemyFactory _enemyFactory;
     [Inject] private ILevelInfoProvider _levelInfoProvider;
-
     [Inject] private CurrentCannonLoadoutProvider _loadoutProvider;
 
     public event EventHandler LoadingCompleted = delegate { };
@@ -52,8 +54,7 @@ public class LevelLoader : ScriptableObject
     private void LoadLevelInfo(int level)
     {
         var levelInfo = _levelInfoProvider.GetLevel(level);
-
-        // Enemies and etc instantiation logic
+        _enemyFactory.WarmUp(levelInfo.EstimatedMaxEnemiesOnScreen);
 
         LevelInfoLoadingCompleted(this, new LevelInfoEventArgs(levelInfo));
     }

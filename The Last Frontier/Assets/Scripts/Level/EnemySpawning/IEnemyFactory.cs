@@ -1,10 +1,12 @@
+using System.Collections.Generic;
 using TLFGameLogic.Model;
-using TLFGameLogic.Model.LevelData;
 
 namespace TLFUILogic
 {
     public interface IEnemyFactory
     {
-        EnemyView GetEnemy(Enemy enemy, SpawnPoint spawnPoint);
+        void WarmUp(Dictionary<EnemyType, int> estimatedEnemiesOnScreen);
+
+        EnemyViewModel GetEnemy(Enemy enemy);
     }
 }
