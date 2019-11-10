@@ -66,10 +66,10 @@ namespace Level
                     var enemyViewModel = _enemyFactory.GetEnemy(enemySpawnInfo.Enemy);
 
                     var spawnPointTransform = _spawnPointResolver.GetSpawnPointTransform(enemySpawnInfo.SpawnPoint);
-                    enemyViewModel.EnemyGameObject.transform.position = spawnPointTransform.position;
-                    enemyViewModel.EnemyGameObject.transform.rotation = spawnPointTransform.rotation;
+                    enemyViewModel.gameObject.transform.position = spawnPointTransform.position;
+                    enemyViewModel.gameObject.transform.rotation = spawnPointTransform.rotation;
 
-//                    enemyViewModel.Rigidbody.AddForce(enemyViewModel.Enemy.Speed * 50f * (-spawnPointTransform.right), ForceMode2D.Force);
+//                    enemyViewModel.RigidBody.AddForce(enemyViewModel.Enemy.Speed * 50f * (-spawnPointTransform.right), ForceMode2D.Force);
 
                     _enemiesSpawnInfo.RemoveAt(i);
                 }

@@ -23,15 +23,14 @@ namespace TLFUILogic
         {
             var prefab = _enemyPrefabDictionary.GetEnemyPrefab(enemy.EnemyType);
             var enemyGameObject = Instantiate(prefab);
-            var enemyViewModel = enemyGameObject.AddComponent<EnemyViewModel>();
+            var enemyViewModel = enemyGameObject.AddComponent<EnemyViewModel>(); //TODO Change to GetComponent
 
-            enemyViewModel.EnemyGameObject = enemyGameObject;
             enemyViewModel.Enemy = enemy;
-            enemyViewModel.Rigidbody = enemyGameObject.GetComponent<Rigidbody2D>();
+            enemyViewModel.RigidBody = enemyGameObject.GetComponent<Rigidbody2D>();
 
             _createdEnemies.Add(enemyViewModel);
             enemy.LethalDamage += EnemyOnLethalDamage;
-//            enemyViewModel.Rigidbody.AddForce(-spawnPointTransform.right * enemy.Speed * 10f, ForceMode2D.Force);
+//            enemyViewModel.RigidBody.AddForce(-spawnPointTransform.right * enemy.Speed * 10f, ForceMode2D.Force);
             return enemyViewModel;
         }
 
@@ -41,7 +40,7 @@ namespace TLFUILogic
             {
                 var enemyViewModel = _createdEnemies.Find(x => x.Enemy.Equals(sender as Enemy));
                 _createdEnemies.Remove(enemyViewModel);
-                Destroy(enemyViewModel.EnemyGameObject);
+                Destroy(enemyViewModel.gameObject);
             }
         }
     }

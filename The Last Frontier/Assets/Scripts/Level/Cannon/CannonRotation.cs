@@ -1,20 +1,12 @@
 ﻿using UnityEngine;
 
-public class CannonMovement : MonoBehaviour
+public class CannonRotation : MonoBehaviour
 {
     private Vector2 position;
     public Rigidbody2D rb;
 
     private void Update()
     {
-        /*Touch[] touches = Input.touches;
-
-        foreach (Touch touch in touches)
-        {
-
-        }*/
-
-
         if (Input.touchCount != 0)
         {
             var touch = Input.GetTouch(0);

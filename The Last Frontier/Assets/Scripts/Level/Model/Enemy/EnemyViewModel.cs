@@ -1,3 +1,4 @@
+using ModestTree;
 using TLFGameLogic.Model;
 using UnityEngine;
 
@@ -7,9 +8,7 @@ namespace TLFUILogic
     {
         public Enemy Enemy { get; set; }
 
-        public GameObject EnemyGameObject { get; set; }
-
-        public Rigidbody2D Rigidbody { get; set; }
+        public Rigidbody2D RigidBody { get; set; }
 
         public void Move(Vector2 target)
         {

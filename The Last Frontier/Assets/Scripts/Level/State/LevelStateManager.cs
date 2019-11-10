@@ -18,17 +18,13 @@ namespace Level
             Debug.Log("State manager enabled");
 
             _levelLoader = levelLoader;
-            _levelLoader.CurrentCannonLoadoutLoadingCompleted += OnCurrentCannonLoadoutLoaded;
             _levelLoader.LevelInfoLoadingCompleted += OnLevelInfoLoaded;
             //_levelLoader.LoadingCompleted += OnLevelLoaded;
         }
 
-        public CurrentCannonLoadout CurrentCannonLoadout { get; private set; }
-
         ~LevelStateManager()
         {
             _levelLoader.LevelInfoLoadingCompleted -= OnLevelInfoLoaded;
-            _levelLoader.CurrentCannonLoadoutLoadingCompleted -= OnCurrentCannonLoadoutLoaded;
             //_levelLoader.LoadingCompleted -= OnLevelLoaded;
         }
 
@@ -36,15 +32,7 @@ namespace Level
         {
             //_levelLoader.LoadingCompleted -= OnLevelLoaded;
         }
-
-        private void OnCurrentCannonLoadoutLoaded(object sender, CurrentCannonLoadoutEventArgs args)
-        {
-            CurrentCannonLoadout = args.CurrentCannonLoadout;
-            Debug.Log("Cannon info passed to state manager");
-
-            _levelLoader.CurrentCannonLoadoutLoadingCompleted -= OnCurrentCannonLoadoutLoaded;
-        }
-
+        
         private void OnLevelInfoLoaded(object sender, LevelInfoEventArgs args)
         {
             _levelInfo = args.LevelInfo;
@@ -53,8 +41,15 @@ namespace Level
             _levelLoader.LevelInfoLoadingCompleted -= OnLevelInfoLoaded;
         }
 
+        private void OnDefeat(object sender, EventArgs args)
+        {
+            Debug.Log("DEFEAT");
+            // Show victory screen
+        }
+        
         private void OnAllEnemiesDead(object sender, EventArgs args)
         {
+            Debug.Log("VICTORY");
             // Show victory screen
         }
     }
