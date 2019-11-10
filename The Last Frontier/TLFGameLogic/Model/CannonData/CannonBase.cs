@@ -8,9 +8,10 @@ namespace TLFGameLogic.Model
     {
         public CannonBase()
         {
-            Damage = 5f;
+            Damage = 6f;
             AttackSpeed = 1f;
             ProjectileType = ProjectileType.Bullet;
+            CannonBaseType = CannonBaseType.RegularGun;
             Ammo = new Ammo();
 
             //TODO make parametrised constructor and factory

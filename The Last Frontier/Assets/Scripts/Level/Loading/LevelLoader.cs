@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Level.Cannon;
 using Level.DTO;
 using Level.LevelEventArgs;
 using TLFGameLogic;
@@ -12,12 +13,15 @@ using Zenject;
 //TODO Refactor
 public class LevelLoader : ScriptableObject
 {
+    [Inject] private IBaseProvider _baseProvider;
+    [Inject] private IBulletFactory _bulletFactory;
     [Inject] private IEnemyFactory _enemyFactory;
     [Inject] private ILevelInfoProvider _levelInfoProvider;
     [Inject] private CurrentCannonLoadoutProvider _loadoutProvider;
 
     public event EventHandler LoadingCompleted = delegate { };
     public event EventHandler<CurrentCannonLoadoutEventArgs> CurrentCannonLoadoutLoadingCompleted = delegate { };
+    public event EventHandler<BaseEventArgs> BaseLoadingCompleted = delegate { };
     public event EventHandler<LevelInfoEventArgs> LevelInfoLoadingCompleted = delegate { };
     public event EventHandler<SpawnPointEventArgs> SpawnPointsLoadingCompleted = delegate { };
 
@@ -37,15 +41,26 @@ public class LevelLoader : ScriptableObject
         var currentLevel = 1;
 
         LoadSpawnPoints();
+        LoadBase();
         LoadCurrentCannonLoadout();
         LoadLevelInfo(currentLevel);
         LoadingCompleted(this, EventArgs.Empty);
+    }
+
+    private void LoadBase()
+    {
+        var currentBase = _baseProvider.GetBase();
+
+        // Base prefab and etc instantiation logic
+
+        BaseLoadingCompleted(this, new BaseEventArgs(currentBase));
     }
 
     private void LoadCurrentCannonLoadout()
     {
         var currentCannonLoadout = _loadoutProvider.GetLoadout();
 
+        _bulletFactory.WarmUp();
         // Cannon prefab and etc instantiation logic
 
         CurrentCannonLoadoutLoadingCompleted(this, new CurrentCannonLoadoutEventArgs(currentCannonLoadout));
