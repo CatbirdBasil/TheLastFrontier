@@ -16,7 +16,10 @@ namespace Level.Model.Cannon
 
         private void OnTriggerEnter2D(Collider2D hitInfo)
         {
-            EnemyViewModel enemyViewModel = hitInfo.gameObject.GetComponent<EnemyViewModel>();
+            if (hitInfo.gameObject.CompareTag("Background")) // TODO Make constant and move to constants class
+                OnCollision(this, EventArgs.Empty);
+
+            var enemyViewModel = hitInfo.gameObject.GetComponent<EnemyViewModel>();
 
             if (enemyViewModel != null)
             {

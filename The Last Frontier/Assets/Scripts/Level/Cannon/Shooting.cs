@@ -1,11 +1,7 @@
 ﻿using Level;
 using Level.Cannon;
-using Level.Model.Cannon;
-using TLFGameLogic;
-using TLFUILogic;
 using UnityEngine;
 using Zenject;
-using Random = System.Random;
 
 public class Shooting : MonoBehaviour
 {
@@ -14,7 +10,7 @@ public class Shooting : MonoBehaviour
 
     public Transform firePoint;
     public float timeBeforeNextShot;
-    
+
     //todo update logic to shoot instantly
     private void Update()
     {
@@ -23,12 +19,13 @@ public class Shooting : MonoBehaviour
             if (Input.touchCount != 0)
             {
                 Shoot();
-            } else if (Input.GetButton("Fire1"))
+                timeBeforeNextShot = 1f / _playerState.CurrentCannonLoadout.AttackSpeed;
+            }
+            else if (Input.GetButton("Fire1"))
             {
                 Shoot();
+                timeBeforeNextShot = 1f / _playerState.CurrentCannonLoadout.AttackSpeed;
             }
-
-            timeBeforeNextShot = 1f / _playerState.CurrentCannonLoadout.AttackSpeed;
         }
         else
         {
@@ -38,7 +35,7 @@ public class Shooting : MonoBehaviour
 
     private void Shoot()
     {
-        BulletViewModel bullet = _bulletFactory.GetBullet();
+        var bullet = _bulletFactory.GetBullet();
         bullet.gameObject.transform.position = firePoint.position;
         bullet.gameObject.transform.rotation = firePoint.rotation;
         bullet.RigidBody.AddForce(firePoint.right * bullet.Speed, ForceMode2D.Impulse);

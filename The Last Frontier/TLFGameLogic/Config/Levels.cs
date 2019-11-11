@@ -22,6 +22,7 @@ namespace TLFGameLogic.Config
             levelInfo.AddEnemySpawnInfo(3f, SpawnPoint.A, EnemyFactory.CreateEnemy(EnemyType.SmallSlime));
             levelInfo.AddEnemySpawnInfo(3f, SpawnPoint.G, EnemyFactory.CreateEnemy(EnemyType.SmallSlime));
             levelInfo.AddEnemySpawnInfo(6f, SpawnPoint.C, EnemyFactory.CreateEnemy(EnemyType.SmallSlime));
+            levelInfo.AddEnemySpawnInfo(1f, SpawnPoint.G, EnemyFactory.CreateEnemy(EnemyType.SmallSlime));
 
             return levelInfo;
         }
