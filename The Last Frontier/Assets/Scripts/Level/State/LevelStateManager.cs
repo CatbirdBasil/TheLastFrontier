@@ -35,10 +35,11 @@ namespace Level
         
         private void OnLevelInfoLoaded(object sender, LevelInfoEventArgs args)
         {
+
             _levelInfo = args.LevelInfo;
             _levelInfo.AllEnemiesDead += OnAllEnemiesDead;
-
             _levelLoader.LevelInfoLoadingCompleted -= OnLevelInfoLoaded;
+//            _base.CurrentBase.LethalDamage+= OnDefeat;
         }
 
         private void OnDefeat(object sender, EventArgs args)
