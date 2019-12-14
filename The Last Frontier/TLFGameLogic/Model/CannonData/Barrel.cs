@@ -4,23 +4,25 @@ using TLFUILogic;
 
 namespace TLFGameLogic.Model.CannonData
 {
-    public class CannonBarrel : CannonPart
+    public class Barrel : CannonPart
     {
-        public CannonBarrel()
+        public Barrel()
         {
-            DamageMultipier = 0f;
+            DamageMultiplier = 0f;
             AttackSpeedMultiplier = 0f;
-            CannonBaseType = CannonBaseType.RegularGun;
+            BarrelType = BarrelType.Simple;
+            BarrelModel = BarrelModel.SimpleBarrel;
 
             //TODO make parametrised constructor and factory
             Id = 0;
             Name = "Regular Cannon Barrel";
         }
 
-        public float DamageMultipier { get; }
+        public float DamageMultiplier { get; }
         public float AttackSpeedMultiplier { get; }
         public int AdditionalShotsAmount { get; }
-        public CannonBaseType CannonBaseType { get; }
+        public BarrelType BarrelType { get; }
+        public BarrelModel BarrelModel { get; }
 
         public override float GetValue()
         {
@@ -33,7 +35,7 @@ namespace TLFGameLogic.Model.CannonData
                     break;
             }
 
-            value += DamageMultipier * CannonConfig.CannonBarrel.DamageMultiplierValueMultiplier;
+            value += DamageMultiplier * CannonConfig.CannonBarrel.DamageMultiplierValueMultiplier;
             value += AttackSpeedMultiplier * CannonConfig.CannonBarrel.AttackSpeedMultiplierValueMultiplier;
             value += AdditionalShotsAmount * CannonConfig.CannonBarrel.AdditionalProjectilesValueMultiplier;
             return value;

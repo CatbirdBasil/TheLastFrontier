@@ -52,10 +52,12 @@
     <Compile Include="Model\BaseData\Base.cs" />
     <Compile Include="Model\CannonData\Ammo.cs" />
     <Compile Include="Model\CannonData\Cannon.cs" />
-    <Compile Include="Model\CannonData\CannonBarrel.cs" />
+    <Compile Include="Model\CannonData\Barrel.cs" />
     <Compile Include="Model\CannonData\CannonBase.cs" />
     <Compile Include="Model\CannonData\CannonPart.cs" />
-    <Compile Include="Model\CannonData\Enum\CannonBarrelType.cs" />
+    <Compile Include="Model\CannonData\Enum\BarrelModel.cs" />
+    <Compile Include="Model\CannonData\Enum\BarrelType.cs" />
+    <Compile Include="Model\CannonData\Enum\CannonBaseModel.cs" />
     <Compile Include="Model\CannonData\Enum\ProjectileType.cs" />
     <Compile Include="Model\CannonData\Enum\Rang.cs" />
     <Compile Include="Model\CannonData\Enum\CannonBaseType.cs" />

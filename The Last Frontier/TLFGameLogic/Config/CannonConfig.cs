@@ -21,7 +21,7 @@ namespace TLFGameLogic.Model.CannonData.Config
 
         public class CannonBarrel
         {
-            // ----- CannonBarrel Part START -------------------
+            // ----- Barrel Part START -------------------
             public const float BasicValueCommon = 8f;
 
             public const float DamageMultiplierMinCommon = -0.3f;
@@ -34,7 +34,7 @@ namespace TLFGameLogic.Model.CannonData.Config
             public const float AttackSpeedMultiplierValueMultiplier = 2f;
 
             public const float AdditionalProjectilesValueMultiplier = 6f;
-            // ----- CannonBarrel Part END ---------------------
+            // ----- Barrel Part END ---------------------
         }
     }
 }

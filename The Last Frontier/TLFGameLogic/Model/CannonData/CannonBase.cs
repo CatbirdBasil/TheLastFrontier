@@ -6,12 +6,21 @@ namespace TLFGameLogic.Model
 {
     public class CannonBase : CannonPart
     {
+        public float Damage { get; }
+        public float AttackSpeed { get; }
+        public ProjectileType ProjectileType { get; }
+        public Ammo Ammo { get; }
+
+        public CannonBaseType CannonBaseType { get; }
+        public CannonBaseModel CannonBaseModel { get; }
+
         public CannonBase()
         {
             Damage = 6f;
             AttackSpeed = 1f;
             ProjectileType = ProjectileType.Bullet;
             CannonBaseType = CannonBaseType.RegularGun;
+            CannonBaseModel = CannonBaseModel.SimpleRegularGun;
             Ammo = new Ammo();
 
             //TODO make parametrised constructor and factory
@@ -28,14 +37,7 @@ namespace TLFGameLogic.Model
             Ammo = ammo;
             CannonBaseType = cannonBaseType;
         }
-
-        public float Damage { get; }
-        public float AttackSpeed { get; }
-        public ProjectileType ProjectileType { get; }
-        public Ammo Ammo { get; }
-
-        public CannonBaseType CannonBaseType { get; }
-
+        
         public override float GetValue()
         {
             float value = 0;

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using Level.Cannon;
+using Level.Cannon.Barrel;
+using Level.Cannon.Base;
 using Level.DTO;
 using Level.LevelEventArgs;
 using TLFGameLogic;
@@ -13,14 +15,20 @@ using Zenject;
 //TODO Refactor
 public class LevelLoader : ScriptableObject
 {
+    [Inject] private BarrelAnimatorControllerResolver _barrelAnimatorControllerResolver;
+
+    [Inject] private BarrelSpriteResolver _barrelSpriteResolver;
     [Inject] private IBaseProvider _baseProvider;
     [Inject] private IBulletFactory _bulletFactory;
+    [Inject] private CannonBaseSpriteResolver _cannonBaseSpriteResolver;
     [Inject] private IEnemyFactory _enemyFactory;
     [Inject] private ILevelInfoProvider _levelInfoProvider;
     [Inject] private CurrentCannonLoadoutProvider _loadoutProvider;
 
     public event EventHandler LoadingCompleted = delegate { };
     public event EventHandler<CurrentCannonLoadoutEventArgs> CurrentCannonLoadoutLoadingCompleted = delegate { };
+    public event EventHandler<BarrelEventArgs> BarrelLoadingCompleted = delegate { };
+    public event EventHandler<CannonBaseEventArgs> CannonBaseLoadingCompleted = delegate { };
     public event EventHandler<BaseEventArgs> BaseLoadingCompleted = delegate { };
     public event EventHandler<LevelInfoEventArgs> LevelInfoLoadingCompleted = delegate { };
     public event EventHandler<SpawnPointEventArgs> SpawnPointsLoadingCompleted = delegate { };
@@ -59,11 +67,17 @@ public class LevelLoader : ScriptableObject
     private void LoadCurrentCannonLoadout()
     {
         var currentCannonLoadout = _loadoutProvider.GetLoadout();
-
         _bulletFactory.WarmUp();
-        // Cannon prefab and etc instantiation logic
-
         CurrentCannonLoadoutLoadingCompleted(this, new CurrentCannonLoadoutEventArgs(currentCannonLoadout));
+
+        var barrelSprite = _barrelSpriteResolver.GetBarrelSprite(currentCannonLoadout.Cannon.Barrel.BarrelModel);
+        var barrelAnimatorController =
+            _barrelAnimatorControllerResolver.GetAnimatorController(currentCannonLoadout.Cannon.Barrel.BarrelModel);
+        BarrelLoadingCompleted(this, new BarrelEventArgs(barrelSprite, barrelAnimatorController));
+
+        var cannonBaseSprite =
+            _cannonBaseSpriteResolver.GetCannonBaseSprite(currentCannonLoadout.Cannon.Base.CannonBaseModel);
+        CannonBaseLoadingCompleted(this, new CannonBaseEventArgs(cannonBaseSprite));
     }
 
     private void LoadLevelInfo(int level)

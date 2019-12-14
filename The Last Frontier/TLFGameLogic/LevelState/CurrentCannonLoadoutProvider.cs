@@ -41,7 +41,7 @@ namespace TLFGameLogic
 
             if (cannon.Barrel != null)
             {
-                _damage += damageToMultiply * cannon.Barrel.DamageMultipier;
+                _damage += damageToMultiply * cannon.Barrel.DamageMultiplier;
                 _attackSpeed += attackSpeedToMultiply * cannon.Barrel.AttackSpeedMultiplier;
                 _amountOfAdditionalBarrels += cannon.Barrel.AdditionalShotsAmount;
             }
