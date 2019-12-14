@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4936100191719098467}
   - component: {fileID: 513146486778639157}
   - component: {fileID: 6305926175278922775}
+  - component: {fileID: 9085105589919021613}
   m_Layer: 0
   m_Name: SmallSlime
   m_TagString: Untagged
@@ -118,3 +119,22 @@ CircleCollider2D:
   m_Offset: {x: 0.090304375, y: 0.018053055}
   serializedVersion: 2
   m_Radius: 0.9911158
+--- !u!95 &9085105589919021613
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3657753346709725363}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 14c30ddf557a9b544950e329f3888880, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

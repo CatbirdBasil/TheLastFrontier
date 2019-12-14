@@ -1,3 +1,4 @@
+using System;
 using ModestTree;
 using TLFGameLogic.Model;
 using UnityEngine;
@@ -6,13 +7,46 @@ namespace TLFUILogic
 {
     public class EnemyViewModel : MonoBehaviour
     {
-        public Enemy Enemy { get; set; }
+        public Enemy Enemy { get; private set; }
 
         public Rigidbody2D RigidBody { get; set; }
+        
+        public Animator Animator { get; set; }
 
-        public void Move(Vector2 target)
+        private const string AnimatorLethalDamageTriggerName = "Lethal Damage";
+        private const string AnimatorSpeedParameterName = "Speed";
+        private const string AnimatorAttackTriggerName = "Attack";
+
+        public bool IsAlive { get; private set; }
+
+        public void InitEnemy(Enemy enemy)
         {
-            transform.position = Vector2.MoveTowards(transform.position, target, Enemy.Speed);
+            Enemy = enemy;
+            IsAlive = true;
+            Enemy.LethalDamage += EnemyOnLethalDamage;
+        }
+
+        private void OnDisable()
+        {
+            Enemy.LethalDamage -= EnemyOnLethalDamage;
+        }
+
+        void Update()
+        {
+            if (IsAlive)
+            {
+                if (this.transform.position.x > -12)
+                    Move(-12); 
+            }
+        }
+
+        public void Move(int target)
+        {
+            // var velocityChange = desiredVelocity - RigidBody.velocity;
+            // RigidBody.AddForce (velocityChange, ForceMode.VelocityChange);
+            
+            transform.position = Vector2.MoveTowards(transform.position, new Vector2(target,this.transform.position.y), Enemy.Speed*0.01f);
+            
         }
 
         public void TakeDamage(float damage)
@@ -22,6 +56,12 @@ namespace TLFUILogic
 
         public void Attack()
         {
+        }
+        
+        private void EnemyOnLethalDamage(object sender, EventArgs e)
+        {
+            IsAlive = false;
+            Animator.SetTrigger(AnimatorLethalDamageTriggerName);
         }
     }
 }

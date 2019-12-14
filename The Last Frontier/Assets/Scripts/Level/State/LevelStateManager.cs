@@ -19,12 +19,14 @@ namespace Level
 
             _levelLoader = levelLoader;
             _levelLoader.LevelInfoLoadingCompleted += OnLevelInfoLoaded;
+            _levelLoader.BaseLoadingCompleted += OnBaseLoaded;
             //_levelLoader.LoadingCompleted += OnLevelLoaded;
         }
 
         ~LevelStateManager()
         {
             _levelLoader.LevelInfoLoadingCompleted -= OnLevelInfoLoaded;
+            _levelLoader.BaseLoadingCompleted += OnBaseLoaded;
             //_levelLoader.LoadingCompleted -= OnLevelLoaded;
         }
 
@@ -40,8 +42,14 @@ namespace Level
 
             _levelLoader.LevelInfoLoadingCompleted -= OnLevelInfoLoaded;
         }
+        
+        private void OnBaseLoaded(object sender, BaseEventArgs args)
+        {
+            args.CurrentBase.LethalDamage += OnBaseDestroyed;
+        }
 
-        private void OnDefeat(object sender, EventArgs args)
+
+        private void OnBaseDestroyed(object sender, EventArgs args)
         {
             Debug.Log("DEFEAT");
             // Show victory screen
