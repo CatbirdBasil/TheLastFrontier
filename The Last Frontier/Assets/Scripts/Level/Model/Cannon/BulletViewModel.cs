@@ -21,7 +21,7 @@ namespace Level.Model.Cannon
 
             var enemyViewModel = hitInfo.gameObject.GetComponent<EnemyViewModel>();
 
-            if (enemyViewModel != null)
+            if (enemyViewModel != null && enemyViewModel.IsAlive)
             {
                 enemyViewModel.TakeDamage(Damage);
                 OnCollision(this, EventArgs.Empty);

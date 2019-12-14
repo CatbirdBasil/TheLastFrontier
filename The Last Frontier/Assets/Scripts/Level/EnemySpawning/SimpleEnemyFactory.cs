@@ -25,8 +25,9 @@ namespace TLFUILogic
             var enemyGameObject = Instantiate(prefab);
             var enemyViewModel = enemyGameObject.AddComponent<EnemyViewModel>(); //TODO Change to GetComponent
 
-            enemyViewModel.Enemy = enemy;
+            enemyViewModel.InitEnemy(enemy);
             enemyViewModel.RigidBody = enemyGameObject.GetComponent<Rigidbody2D>();
+            enemyViewModel.Animator = enemyGameObject.GetComponent<Animator>();
 
             _createdEnemies.Add(enemyViewModel);
             enemy.LethalDamage += EnemyOnLethalDamage;
@@ -40,7 +41,7 @@ namespace TLFUILogic
             {
                 var enemyViewModel = _createdEnemies.Find(x => x.Enemy.Equals(sender as Enemy));
                 _createdEnemies.Remove(enemyViewModel);
-                Destroy(enemyViewModel.gameObject);
+                Destroy(enemyViewModel.gameObject, 2);
             }
         }
     }
