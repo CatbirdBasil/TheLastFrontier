@@ -5,7 +5,7 @@ namespace Level.Cannon.Base
 {
     public class CannonBaseSpriteResolver
     {
-        private const string SpriteRoot = "Sprites/CannonBases/";
+        private const string SpriteRoot = "Sprites/Cannon/CannonBases/";
         private const string SimpleBRegularGun = "SimpleRegularGun";
 
         public Sprite GetCannonBaseSprite(CannonBaseModel baseModel)

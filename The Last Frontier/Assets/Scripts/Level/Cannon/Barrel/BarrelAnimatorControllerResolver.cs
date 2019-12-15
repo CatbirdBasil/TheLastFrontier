@@ -6,7 +6,7 @@ namespace Level.Cannon.Barrel
 {
     public class BarrelAnimatorControllerResolver
     {
-        private const string AnimationRoot = "Animation/";
+        private const string AnimationRoot = "Animations/Cannon/Barrel";
         private const string DefaultControllerName = "/Barrel";
         private const string SimpleBarrel = "SimpleBarrel";
 

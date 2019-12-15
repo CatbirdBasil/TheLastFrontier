@@ -5,7 +5,7 @@ namespace Level.Cannon.Barrel
 {
     public class BarrelSpriteResolver
     {
-        private const string SpriteRoot = "Sprites/Barrels/";
+        private const string SpriteRoot = "Sprites/Cannon/Barrels/";
         private const string SimpleBarrel = "SimpleBarrel";
 
         public Sprite GetBarrelSprite(BarrelModel barrelModel)
