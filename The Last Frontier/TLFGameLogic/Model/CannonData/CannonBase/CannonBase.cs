@@ -32,12 +32,12 @@ namespace TLFGameLogic.Model
             CannonBaseType = cannonBaseType;
         }
 
-        public float Damage { get; }
-        public float AttackSpeed { get; }
-        public ProjectileType ProjectileType { get; }
-        public float ProjectileSpeed { get; }
-        public CannonBaseType CannonBaseType { get; }
-        public CannonBaseModel CannonBaseModel { get; }
+        public float Damage { get; private set; }
+        public float AttackSpeed { get; private set; }
+        public ProjectileType ProjectileType { get; private set; }
+        public float ProjectileSpeed { get; private set; }
+        public CannonBaseType CannonBaseType { get; private set; }
+        public CannonBaseModel CannonBaseModel { get; private set; }
 
         public override float GetValue()
         {
