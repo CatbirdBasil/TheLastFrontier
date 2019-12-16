@@ -51,16 +51,18 @@
     <Compile Include="LevelState\SimpleLevelInfoProvider.cs" />
     <Compile Include="Model\BaseData\Base.cs" />
     <Compile Include="Model\CannonData\Ammo.cs" />
+      <Compile Include="Model\CannonData\Barrel\Barrel.cs"/>
+      <Compile Include="Model\CannonData\Barrel\BarrelModel.cs"/>
+      <Compile Include="Model\CannonData\Barrel\BarrelModelHelper.cs"/>
+      <Compile Include="Model\CannonData\Barrel\BarrelType.cs"/>
     <Compile Include="Model\CannonData\Cannon.cs" />
-    <Compile Include="Model\CannonData\Barrel.cs" />
-    <Compile Include="Model\CannonData\CannonBase.cs" />
+      <Compile Include="Model\CannonData\CannonBase\CannonBase.cs"/>
+      <Compile Include="Model\CannonData\CannonBase\CannonBaseModel.cs"/>
+      <Compile Include="Model\CannonData\CannonBase\CannonBaseModelHelper.cs"/>
+      <Compile Include="Model\CannonData\CannonBase\CannonBaseType.cs"/>
+      <Compile Include="Model\CannonData\CannonBase\ProjectileType.cs"/>
     <Compile Include="Model\CannonData\CannonPart.cs" />
-    <Compile Include="Model\CannonData\Enum\BarrelModel.cs" />
-    <Compile Include="Model\CannonData\Enum\BarrelType.cs" />
-    <Compile Include="Model\CannonData\Enum\CannonBaseModel.cs" />
-    <Compile Include="Model\CannonData\Enum\ProjectileType.cs" />
     <Compile Include="Model\CannonData\Enum\Rang.cs" />
-    <Compile Include="Model\CannonData\Enum\CannonBaseType.cs" />
     <Compile Include="Model\EnemyData\Enemy.cs" />
     <Compile Include="Model\EnemyData\EnemyType.cs" />
     <Compile Include="Model\Interfaces\IHpEntity.cs" />
@@ -73,6 +75,7 @@
     <Compile Include="DataSaver\ISaveSystem.cs" />
     <Compile Include="DataSaver\PlayerData.cs" />
     <Compile Include="DataSaver\PlayerDataForSafe.cs" />
+      <Compile Include="Utils\RandomUtils.cs"/>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

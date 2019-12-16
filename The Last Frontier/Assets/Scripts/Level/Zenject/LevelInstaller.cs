@@ -4,6 +4,7 @@ using Level.Cannon.Barrel;
 using Level.Cannon.Base;
 using Level.EnemySpawning;
 using TLFGameLogic;
+using TLFGameLogic.Model;
 using Zenject;
 
 namespace TLFUILogic
@@ -32,6 +33,8 @@ namespace TLFUILogic
             Container.Bind<BarrelSpriteResolver>().ToSelf().AsSingle();
             Container.Bind<BarrelAnimatorControllerResolver>().ToSelf().AsSingle();
             Container.Bind<CannonBaseSpriteResolver>().ToSelf().AsSingle();
+            
+            Container.Bind<CannonPartFactory>().ToSelf().AsSingle();
         }
     }
 }

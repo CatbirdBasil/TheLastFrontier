@@ -1,41 +1,46 @@
 using System.Collections.Generic;
-using System.Linq;
 using TLFGameLogic.Model;
 
 namespace TLFUILogic
 {
     /// <summary>
-    /// General information about user and his inventory 
+    ///     General information about user and his inventory
     /// </summary>
     public class PlayerData
     {
-        public List<int> level { get; set; }
-        public int money { get; set; }
-        public int specialMoney { get; set; }
-
-        public List<CannonBase> BaseCannonFragments { get; }
         //TODO add 2 more list for cannon parts 
 
 
         //default date 
         public PlayerData()
         {
-            level = new List<int>();
-            money = 100;
-            specialMoney = 0;
+            Level = new List<int>();
+            Money = 100;
+            SpecialMoney = 0;
             BaseCannonFragments = new List<CannonBase>();
+
+            Loadouts = new List<Cannon>();
+            CurrentLoadout = 0;
         }
 
         public PlayerData(PlayerDataForSafe data)
         {
-            level = new List<int>(data.Level);
-            money = data.Money;
-            specialMoney = data.SpecialMoney;
+            Level = new List<int>(data.Level);
+            Money = data.Money;
+            SpecialMoney = data.SpecialMoney;
 
-            foreach (int baseType in data.BaseFragments)
+            foreach (var baseType in data.BaseFragments)
             {
                 //TODO create baseFragment from its type   
             }
         }
+
+        public List<int> Level { get; set; }
+        public int Money { get; set; }
+        public int SpecialMoney { get; set; }
+        public List<Cannon> Loadouts { get; set; }
+        public int CurrentLoadout { get; set; }
+
+        public List<CannonBase> BaseCannonFragments { get; }
     }
 }

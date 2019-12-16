@@ -1,4 +1,5 @@
 using TLFGameLogic.Model.CannonData.Enum;
+using TLFGameLogic.Model.CannonData.Enum.Barrel;
 using UnityEngine;
 
 namespace Level.Cannon.Barrel

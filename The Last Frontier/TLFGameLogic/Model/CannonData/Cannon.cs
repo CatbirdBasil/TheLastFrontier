@@ -1,4 +1,4 @@
-using TLFGameLogic.Model.CannonData;
+using TLFGameLogic.Model.CannonData.Barrel;
 
 namespace TLFGameLogic.Model
 {

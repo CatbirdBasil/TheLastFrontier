@@ -1,5 +1,5 @@
 using TLFGameLogic.Model;
-using TLFGameLogic.Model.CannonData;
+using TLFGameLogic.Model.CannonData.Barrel;
 
 namespace TLFGameLogic.Config
 {
