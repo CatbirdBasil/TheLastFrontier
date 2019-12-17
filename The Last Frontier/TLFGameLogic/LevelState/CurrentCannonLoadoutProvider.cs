@@ -32,8 +32,7 @@ namespace TLFGameLogic
             _attackSpeed += cannon.Base.AttackSpeed;
             _projectileType = cannon.Base.ProjectileType;
 
-            _damage += cannon.Base.Ammo.Damage;
-            _projectileSpeed += cannon.Base.Ammo.Speed;
+            _projectileSpeed += cannon.Base.ProjectileSpeed;
 
             var damageToMultiply = _damage;
             var attackSpeedToMultiply = _attackSpeed;
@@ -41,7 +40,7 @@ namespace TLFGameLogic
 
             if (cannon.Barrel != null)
             {
-                _damage += damageToMultiply * cannon.Barrel.DamageMultipier;
+                _damage += damageToMultiply * cannon.Barrel.DamageMultiplier;
                 _attackSpeed += attackSpeedToMultiply * cannon.Barrel.AttackSpeedMultiplier;
                 _amountOfAdditionalBarrels += cannon.Barrel.AdditionalShotsAmount;
             }

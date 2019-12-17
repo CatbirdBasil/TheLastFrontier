@@ -1,10 +1,10 @@
-using TLFGameLogic.Model.CannonData;
+using TLFGameLogic.Model.CannonData.Barrel;
 
 namespace TLFGameLogic.Model
 {
     public class Cannon
     {
         public CannonBase Base { get; set; }
-        public CannonBarrel Barrel { get; set; }
+        public Barrel Barrel { get; set; }
     }
 }

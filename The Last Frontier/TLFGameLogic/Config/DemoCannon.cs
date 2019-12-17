@@ -1,4 +1,5 @@
 using TLFGameLogic.Model;
+using TLFGameLogic.Model.CannonData.Barrel;
 
 namespace TLFGameLogic.Config
 {
@@ -9,6 +10,7 @@ namespace TLFGameLogic.Config
             var cannonBase = new CannonBase();
             var cannon = new Cannon();
             cannon.Base = cannonBase;
+            cannon.Barrel = new Barrel();
 
             return cannon;
         }

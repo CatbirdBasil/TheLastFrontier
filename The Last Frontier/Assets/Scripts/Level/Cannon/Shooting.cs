@@ -5,11 +5,18 @@ using Zenject;
 
 public class Shooting : MonoBehaviour
 {
+    private const string ShootTrigger = "Shoot";
+    private Animator _animator;
     [Inject] private IBulletFactory _bulletFactory;
     [Inject] private PlayerState _playerState;
 
     public Transform firePoint;
     private float timeBeforeNextShot = 0.2f;
+
+    public void OnEnable()
+    {
+        _animator = GetComponentInChildren<Animator>();
+    }
 
     //todo update logic to shoot instantly
     private void Update()
@@ -19,6 +26,7 @@ public class Shooting : MonoBehaviour
             if (timeBeforeNextShot <= 0)
             {
                 Shoot();
+                _animator.SetTrigger(ShootTrigger);
                 timeBeforeNextShot = 1f / _playerState.CurrentCannonLoadout.AttackSpeed;
                 Debug.Log(_playerState.CurrentBase);
             }
@@ -29,12 +37,9 @@ public class Shooting : MonoBehaviour
         }
         else
         {
-            if (timeBeforeNextShot >= 0.1f)
-            {
-                timeBeforeNextShot -= Time.deltaTime;
-            }
+            if (timeBeforeNextShot >= 0.1f) timeBeforeNextShot -= Time.deltaTime;
         }
-        
+
         /*
         if (timeBeforeNextShot <= 0)
         {
