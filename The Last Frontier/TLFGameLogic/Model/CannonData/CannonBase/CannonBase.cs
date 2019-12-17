@@ -21,10 +21,11 @@ namespace TLFGameLogic.Model
             Name = "Regular Cannon Base";
         }
 
-        public CannonBase(int id, string name, Rang rang, float damage, float attackSpeed,
+        public CannonBase(Rang rang, float damage, float attackSpeed,
             ProjectileType projectileType, float projectileSpeed,
             CannonBaseType cannonBaseType)
         {
+            Rang = rang;
             Damage = damage;
             AttackSpeed = attackSpeed;
             ProjectileType = projectileType;
@@ -32,6 +33,18 @@ namespace TLFGameLogic.Model
             CannonBaseType = cannonBaseType;
         }
 
+        public CannonBase(int rang, float damage, float attackSpeed,
+            int projectileType, float projectileSpeed,
+            int cannonBaseType)
+        {
+            Rang = (Rang)rang;
+            Damage = damage;
+            AttackSpeed = attackSpeed;
+            ProjectileType = (ProjectileType)projectileType;
+            ProjectileSpeed = projectileSpeed;
+            CannonBaseType = (CannonBaseType)cannonBaseType;
+        }
+        
         public float Damage { get; private set; }
         public float AttackSpeed { get; private set; }
         public ProjectileType ProjectileType { get; private set; }

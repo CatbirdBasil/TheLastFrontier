@@ -43,6 +43,15 @@ namespace TLFGameLogic.Model.CannonData.Barrel
             return value;
         }
 
+        public Barrel(float damageMultiplier,float attackSpeedMultiplier,int additionalShotsAmount,int barrelType,int barrelModel)
+        {
+            DamageMultiplier = damageMultiplier;
+            AttackSpeedMultiplier = attackSpeedMultiplier;
+            AdditionalShotsAmount = additionalShotsAmount;
+            BarrelType = (BarrelType) barrelType;
+            BarrelModel = (BarrelModel) barrelModel;
+        }
+
         public class Builder : AbstractCannonPartBuilder<Barrel>
         {
             public Builder(uint id, Rang rang, BarrelModel model) : base(id, BarrelModelHelper.GetName(model), rang)
