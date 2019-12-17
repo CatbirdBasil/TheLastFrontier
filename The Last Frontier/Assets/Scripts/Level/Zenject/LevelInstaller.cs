@@ -1,6 +1,7 @@
 using Level;
 using Level.Cannon;
 using Level.EnemySpawning;
+using Level.Model.Cannon;
 using TLFGameLogic;
 using Zenject;
 
@@ -20,7 +21,8 @@ namespace TLFUILogic
             Container.Bind<SpawnPointResolver>().ToSelf().AsSingle();
             Container.Bind<LevelStateManager>().ToSelf().AsSingle().NonLazy();
             Container.Bind<PlayerState>().ToSelf().AsSingle().NonLazy();
-
+            Container.Bind<BaseProvider>().ToSelf().AsSingle().NonLazy();
+                
             Container.Bind<EnemyPrefabDictionary>().ToSelf().AsSingle();
             Container.Bind<IEnemyFactory>().To<SimpleEnemyFactory>().AsSingle();
             

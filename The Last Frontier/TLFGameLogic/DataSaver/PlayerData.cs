@@ -15,6 +15,8 @@ namespace TLFUILogic
 
         public List<CannonBase> BaseCannonFragments { get; }
         //TODO add 2 more list for cannon parts 
+        
+        
 
 
         //default date 

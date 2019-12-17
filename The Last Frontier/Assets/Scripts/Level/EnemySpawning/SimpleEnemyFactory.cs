@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Level;
 using TLFGameLogic.Model;
 using UnityEngine;
 using Zenject;
@@ -10,6 +11,7 @@ namespace TLFUILogic
     {
         private List<EnemyViewModel> _createdEnemies;
         [Inject] private EnemyPrefabDictionary _enemyPrefabDictionary;
+        [Inject] BaseProvider _baseProvider;
 
         public void WarmUp(Dictionary<EnemyType, int> estimatedEnemiesOnScreen)
         {
@@ -24,7 +26,7 @@ namespace TLFUILogic
             var prefab = _enemyPrefabDictionary.GetEnemyPrefab(enemy.EnemyType);
             var enemyGameObject = Instantiate(prefab);
             var enemyViewModel = enemyGameObject.AddComponent<EnemyViewModel>(); //TODO Change to GetComponent
-
+            enemyViewModel.setBase(_baseProvider.CurrentBase);
             enemyViewModel.InitEnemy(enemy);
             enemyViewModel.RigidBody = enemyGameObject.GetComponent<Rigidbody2D>();
             enemyViewModel.Animator = enemyGameObject.GetComponent<Animator>();

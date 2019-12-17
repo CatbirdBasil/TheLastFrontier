@@ -1,7 +1,10 @@
 using System;
+using Level;
 using Level.LevelEventArgs;
+using Level.Model.Cannon;
 using ModestTree;
 using TLFGameLogic.Model;
+using TLFGameLogic.Model.BaseData;
 using UnityEngine;
 using Zenject;
 
@@ -10,7 +13,7 @@ namespace TLFUILogic
 {
     public class EnemyViewModel : MonoBehaviour
     {
-        [Inject] private BaseEventArgs _base;
+        [Inject] private PlayerState _playerState;
         public Enemy Enemy { get; private set; }
 
         public Rigidbody2D RigidBody { get; set; }
@@ -22,6 +25,8 @@ namespace TLFUILogic
         private const string AnimatorAttackTriggerName = "Attack";
 
         public bool IsAlive { get; private set; }
+
+        private Base CurrentBase;
 
         public void InitEnemy(Enemy enemy)
         {
@@ -48,9 +53,6 @@ namespace TLFUILogic
 
         public void Move(int target)
         {
-            // var velocityChange = desiredVelocity - RigidBody.velocity;
-            // RigidBody.AddForce (velocityChange, ForceMode.VelocityChange);
-            
             transform.position = Vector2.MoveTowards(transform.position, new Vector2(target,this.transform.position.y), Enemy.Speed*0.01f);
             
         }
@@ -62,14 +64,18 @@ namespace TLFUILogic
 
         public void Attack()
         {
-            var currentBase = _base.CurrentBase;
-            currentBase.TakeDamage(Enemy.Damage);
+            CurrentBase.TakeDamage(Enemy.Damage);
         }
         
         private void EnemyOnLethalDamage(object sender, EventArgs e)
         {
             IsAlive = false;
             Animator.SetTrigger(AnimatorLethalDamageTriggerName);
+        }
+
+        public void setBase(Base _base)
+        {
+            CurrentBase = _base;
         }
     }
 }

@@ -20,6 +20,7 @@ public class Shooting : MonoBehaviour
             {
                 Shoot();
                 timeBeforeNextShot = 1f / _playerState.CurrentCannonLoadout.AttackSpeed;
+                Debug.Log(_playerState.CurrentBase);
             }
             else
             {

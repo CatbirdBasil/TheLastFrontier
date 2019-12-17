@@ -12,6 +12,8 @@ namespace TLFGameLogic.Model.BaseData
 
         public Base()
         {
+            CurrentHp = 100;
+            MaxHp = 100;
         }
 
         public Base(float maxHp)
