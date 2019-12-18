@@ -1,18 +1,15 @@
 using System;
-using UnityEditor.Animations;
 using UnityEngine;
 
 namespace Level.LevelEventArgs
 {
     public class BarrelEventArgs : EventArgs
     {
-        public BarrelEventArgs(Sprite barrelSprite, AnimatorController animatorController)
+        public BarrelEventArgs(GameObject barrelPrefab)
         {
-            BarrelSprite = barrelSprite;
-            AnimatorController = animatorController;
+            BarrelPrefab = barrelPrefab;
         }
 
-        public Sprite BarrelSprite { get; }
-        public AnimatorController AnimatorController { get; }
+        public GameObject BarrelPrefab { get; }
     }
 }

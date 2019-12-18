@@ -11,7 +11,7 @@ namespace TLFUILogic
     {
         private List<EnemyViewModel> _createdEnemies;
         [Inject] private EnemyPrefabDictionary _enemyPrefabDictionary;
-        [Inject] BaseProvider _baseProvider;
+        [Inject] PlayerState _playerState;
 
         public void WarmUp(Dictionary<EnemyType, int> estimatedEnemiesOnScreen)
         {
@@ -26,7 +26,7 @@ namespace TLFUILogic
             var prefab = _enemyPrefabDictionary.GetEnemyPrefab(enemy.EnemyType);
             var enemyGameObject = Instantiate(prefab);
             var enemyViewModel = enemyGameObject.AddComponent<EnemyViewModel>(); //TODO Change to GetComponent
-            enemyViewModel.setBase(_baseProvider.CurrentBase);
+            enemyViewModel.setBase(_playerState.CurrentBase);
             enemyViewModel.InitEnemy(enemy);
             enemyViewModel.RigidBody = enemyGameObject.GetComponent<Rigidbody2D>();
             enemyViewModel.Animator = enemyGameObject.GetComponent<Animator>();

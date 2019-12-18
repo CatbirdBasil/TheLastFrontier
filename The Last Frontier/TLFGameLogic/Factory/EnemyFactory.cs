@@ -11,7 +11,7 @@ namespace TLFGameLogic.Model
                     return new Enemy(
                         "Small slime",
                         20f,
-                        2.5f,
+                        5f,
                         1.0f,
                         1f,
                         enemyType);

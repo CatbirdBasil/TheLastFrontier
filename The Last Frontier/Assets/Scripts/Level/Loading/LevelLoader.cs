@@ -15,9 +15,8 @@ using Zenject;
 //TODO Refactor
 public class LevelLoader : ScriptableObject
 {
-    [Inject] private BarrelAnimatorControllerResolver _barrelAnimatorControllerResolver;
+    [Inject] private BarrelPrefabResolver _barrelPrefabResolver;
 
-    [Inject] private BarrelSpriteResolver _barrelSpriteResolver;
     [Inject] private IBaseProvider _baseProvider;
     [Inject] private IBulletFactory _bulletFactory;
     [Inject] private CannonBaseSpriteResolver _cannonBaseSpriteResolver;
@@ -70,10 +69,8 @@ public class LevelLoader : ScriptableObject
         _bulletFactory.WarmUp();
         CurrentCannonLoadoutLoadingCompleted(this, new CurrentCannonLoadoutEventArgs(currentCannonLoadout));
 
-        var barrelSprite = _barrelSpriteResolver.GetBarrelSprite(currentCannonLoadout.Cannon.Barrel.BarrelModel);
-        var barrelAnimatorController =
-            _barrelAnimatorControllerResolver.GetAnimatorController(currentCannonLoadout.Cannon.Barrel.BarrelModel);
-        BarrelLoadingCompleted(this, new BarrelEventArgs(barrelSprite, barrelAnimatorController));
+        var barrelPrefab = _barrelPrefabResolver.GetBarrelPrefab(currentCannonLoadout.Cannon.Barrel.BarrelModel);
+        BarrelLoadingCompleted(this, new BarrelEventArgs(barrelPrefab));
 
         var cannonBaseSprite =
             _cannonBaseSpriteResolver.GetCannonBaseSprite(currentCannonLoadout.Cannon.Base.CannonBaseModel);
