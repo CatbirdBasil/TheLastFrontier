@@ -1,12 +1,38 @@
+using TLFGameLogic.Model;
+using TLFGameLogic.Model.CannonData.Barrel;
+using TLFUILogic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+using Zenject;
 
 namespace Menu.Loader
 {
     public class InventoryList:MonoBehaviour
     {
+        public Transform contentPanel;
+        [Inject] private FileSaveSystem _file;
+        private PlayerData _player;
+        public TextMeshProUGUI _inventoryName;
+        public TextMeshProUGUI _inventoryText;
         
-        void Start () 
+        void Start ()
         {
+            bool someChanges = false;
+            _player =  _file.getInfo();
+            if (_player.BaseCannonFragments.Count == 0)
+            {
+                _player.BaseCannonFragments.Add(new CannonBase());
+                someChanges = true;
+            }
+
+            if (_player.Barrels.Count == 0)
+            {
+                _player.Barrels.Add(new Barrel());
+            }
+           // _file.saveInfo(_player);
+            
+            Debug.Log("KEK");
             RefreshDisplay ();
         }
 
@@ -18,24 +44,26 @@ namespace Menu.Loader
 
         private void RemoveButtons()
         {
-//            while (contentPanel.childCount > 0) 
-//            {
-//                GameObject toRemove = transform.GetChild(0).gameObject;
-//                buttonObjectPool.ReturnObject(toRemove);
-//            }
+            
         }
 
         private void AddButtons()
         {
-//            for (int i = 0; i < itemList.Count; i++) 
-//            {
-//                Item item = itemList[i];
-//                GameObject newButton = buttonObjectPool.GetObject();
-//                newButton.transform.SetParent(contentPanel);
-//
-//                SampleButton sampleButton = newButton.GetComponent<SampleButton>();
-//                sampleButton.Setup(item, this);
-//            }
+            
+            GameObject butt = Resources.Load<GameObject>("Prefabs/Menu/Inventory/Item_Button");
+            Debug.Log(_player.BaseCannonFragments.Count);
+            for (int i = 0; i < _player.BaseCannonFragments.Count; i++)
+            {
+                GameObject button = Instantiate(butt, contentPanel, false); 
+                ItemButton sampleButton =button.GetComponent<ItemButton>();
+                sampleButton.SetUp(_player.BaseCannonFragments[i], null,_inventoryName,_inventoryText);
+            }
+            for (int i = 0; i < _player.Barrels.Count; i++)
+            {
+                GameObject button = Instantiate(butt, contentPanel, false); 
+                ItemButton sampleButton =button.GetComponent<ItemButton>();
+                sampleButton.SetUp(null, _player.Barrels[i],_inventoryName,_inventoryText);
+            }
         }
     }
 }

@@ -4,6 +4,6 @@ namespace Menu.Loader
     {
         Levels,
         Inventory,
-        Store
+        Shop
     }
 }

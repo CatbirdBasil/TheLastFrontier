@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 654712930825508596}
   - component: {fileID: 6283391768085917036}
+  - component: {fileID: -2967522699962151133}
   - component: {fileID: 612325993541422834}
   - component: {fileID: 8973132195627294273}
   m_Layer: 5
@@ -47,6 +48,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 173482878038561397}
   m_CullTransparentMesh: 0
+--- !u!114 &-2967522699962151133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173482878038561397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1f6fcd8408a4afca1ecc91c72d06feb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &612325993541422834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,7 +130,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 612325993541422834}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -2967522699962151133}
+        m_MethodName: InventoryButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4731591827698322091
 GameObject:
   m_ObjectHideFlags: 0
