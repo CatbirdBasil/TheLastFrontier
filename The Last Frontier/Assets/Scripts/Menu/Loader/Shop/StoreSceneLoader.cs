@@ -2,21 +2,22 @@ using UnityEngine;
 
 namespace Menu.Loader
 {
-    public class LevelsSceneLoader:MenuSceenLoader
+    public class StoreSceneLoader : MenuSceenLoader
     {
-        public Canvas LevelCanvas { get; set; }
+        public Canvas ShopCanvas { get; set; }
+
         public void LoadScene()
         {
-            GameObject tempObject = GameObject.Find("Levels_Canvas");
+            GameObject tempObject = GameObject.Find("Store_Canvas");
             if (tempObject == null) return;
-            LevelCanvas = tempObject.GetComponent<Canvas>();
-            if (LevelCanvas == null)
+            ShopCanvas = tempObject.GetComponent<Canvas>();
+            if (ShopCanvas == null)
             {
                 Debug.Log("Could not locate Canvas component on " + tempObject.name);
             }
             else
             {
-                LevelCanvas.enabled = true;
+                ShopCanvas.enabled = true;
             }
         }
     }

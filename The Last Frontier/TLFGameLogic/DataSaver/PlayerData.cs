@@ -26,6 +26,7 @@ namespace TLFUILogic
             SpecialMoney = 0;
             BaseCannonFragments = new List<CannonBase>();
             Barrels = new List<Barrel>();
+           
         }
 
         public PlayerData(PlayerDataForSafe data)

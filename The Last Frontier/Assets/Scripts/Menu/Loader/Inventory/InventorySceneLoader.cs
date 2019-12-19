@@ -8,7 +8,7 @@ namespace Menu.Loader
         public Canvas InventoryCanvas { get; set; }
 
         public ScrollView ItemsList { get; set; }
-
+        
 
         public void LoadScene()
         {
@@ -24,15 +24,6 @@ namespace Menu.Loader
                 InventoryCanvas.enabled = true;
                 GameObject items = GameObject.Find("Item_area");
                 if (items == null) return;
-//                ItemsList = items.GetComponent<ScrollViewMode>();
-//                if (InventoryCanvas == null)
-//                {
-//                    Debug.Log("Could not locate ScrollView component on " + items.name);
-//                }
-//                else
-//                {
-//                    //get player data items  and make buttons
-//                }
             }
         }
     }
