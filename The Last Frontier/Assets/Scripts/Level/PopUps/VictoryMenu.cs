@@ -1,5 +1,6 @@
 using System;
 using Level.LevelEventArgs;
+using TLFGameLogic;
 using TLFGameLogic.Model;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,23 +12,13 @@ namespace Level.PopUps
     {
         public Text MoneyText;
 
-        [Inject] private LevelLoader _levelLoader;
+        [Inject] private LevelStateManager _levelStateManager;
         private LevelInfo _levelInfo;
 
-        VictoryMenu()
+        private void OnEnable()
         {
-            Debug.Log("Victory Menu init");
-            //_levelLoader.LevelInfoLoadingCompleted += OnLevelInfoLoadingCompleted;
-        }
-
-        ~VictoryMenu()
-        {
-            //_levelLoader.LevelInfoLoadingCompleted -= OnLevelInfoLoadingCompleted;
-        }
-
-        private void OnLevelInfoLoadingCompleted(object sender, LevelInfoEventArgs e)
-        {
-            _levelInfo = e.LevelInfo;
+            _levelInfo = _levelStateManager.LevelInfo;
+            MoneyText.text = _levelInfo.Reward.ToString();
         }
     }
 }

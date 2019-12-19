@@ -11,7 +11,7 @@ namespace Level
     public class LevelStateManager
     {
         private readonly LevelLoader _levelLoader;
-        private LevelInfo _levelInfo;
+        public LevelInfo LevelInfo;
 
         [Inject]
         public LevelStateManager(LevelLoader levelLoader)
@@ -39,8 +39,8 @@ namespace Level
         private void OnLevelInfoLoaded(object sender, LevelInfoEventArgs args)
         {
 
-            _levelInfo = args.LevelInfo;
-            _levelInfo.AllEnemiesDead += OnAllEnemiesDead;
+            LevelInfo = args.LevelInfo;
+            LevelInfo.AllEnemiesDead += OnAllEnemiesDead;
             _levelLoader.LevelInfoLoadingCompleted -= OnLevelInfoLoaded;
 //            _base.CurrentBase.LethalDamage+= OnDefeat;
         }

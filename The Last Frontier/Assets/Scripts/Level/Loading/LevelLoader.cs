@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Intent;
 using Level.Cannon;
 using Level.Cannon.Barrel;
 using Level.Cannon.Base;
@@ -23,6 +24,7 @@ public class LevelLoader : ScriptableObject
     [Inject] private IEnemyFactory _enemyFactory;
     [Inject] private ILevelInfoProvider _levelInfoProvider;
     [Inject] private CurrentCannonLoadoutProvider _loadoutProvider;
+    [Inject] private IntentResolver _intentResolver;
 
     public event EventHandler LoadingCompleted = delegate { };
     public event EventHandler<CurrentCannonLoadoutEventArgs> CurrentCannonLoadoutLoadingCompleted = delegate { };
@@ -45,7 +47,9 @@ public class LevelLoader : ScriptableObject
 
     private void InstantiateLevelData(Scene scene, LoadSceneMode mode)
     {
-        var currentLevel = 1;
+        IntentHolder.Instance.SetIntent(Intent.Intent.LoadLevel, 1);
+        _intentResolver.Resolve();
+        var currentLevel = _intentResolver.GetPayload<int>();
 
         LoadSpawnPoints();
         LoadBase();

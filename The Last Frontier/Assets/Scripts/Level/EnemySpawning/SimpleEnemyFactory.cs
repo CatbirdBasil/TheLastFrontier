@@ -26,9 +26,10 @@ namespace TLFUILogic
             var prefab = _enemyPrefabDictionary.GetEnemyPrefab(enemy.EnemyType);
             var enemyGameObject = Instantiate(prefab);
             var enemyViewModel = enemyGameObject.AddComponent<EnemyViewModel>(); //TODO Change to GetComponent
-            enemyViewModel.setBase(_playerState.CurrentBase);
+            enemyViewModel.SetBase(_playerState.CurrentBase);
             enemyViewModel.InitEnemy(enemy);
             enemyViewModel.RigidBody = enemyGameObject.GetComponent<Rigidbody2D>();
+            enemyViewModel.SpriteRenderer = enemyGameObject.GetComponent<SpriteRenderer>();
             enemyViewModel.Animator = enemyGameObject.GetComponent<Animator>();
 
             _createdEnemies.Add(enemyViewModel);

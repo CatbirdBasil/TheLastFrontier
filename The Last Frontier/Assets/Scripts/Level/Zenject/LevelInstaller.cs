@@ -1,8 +1,10 @@
+using Intent;
 using Level;
 using Level.Cannon;
 using Level.Cannon.Barrel;
 using Level.Cannon.Base;
 using Level.EnemySpawning;
+using Level.Loading;
 using Level.Model.Cannon;
 using TLFGameLogic;
 using TLFGameLogic.Model;
@@ -36,6 +38,8 @@ namespace TLFUILogic
             Container.Bind<CannonBaseSpriteResolver>().ToSelf().AsSingle();
             
             Container.Bind<CannonPartFactory>().ToSelf().AsSingle();
+            
+            Container.Bind<IntentResolver>().To<LevelIntentResolver>().AsSingle();
         }
     }
 }
