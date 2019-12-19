@@ -45,6 +45,7 @@ namespace Level
 
         private void OnBaseLoaded(object sender, BaseEventArgs args)
         {
+            Debug.Log("Base loaded");
             CurrentBase = args.CurrentBase;
 
             _levelLoader.BaseLoadingCompleted -= OnBaseLoaded;

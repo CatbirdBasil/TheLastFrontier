@@ -1,5 +1,6 @@
 using System;
 using Level.LevelEventArgs;
+using Level.PopUps;
 using TLFGameLogic;
 using TLFGameLogic.Model;
 using UnityEngine;
@@ -54,12 +55,14 @@ namespace Level
         {
             Debug.Log("DEFEAT");
             // Show victory screen
+            EndScreenMenuPresenter.ShowDefeatScreen();
         }
         
         private void OnAllEnemiesDead(object sender, EventArgs args)
         {
             Debug.Log("VICTORY");
             // Show victory screen
+            EndScreenMenuPresenter.ShowVictoryScreen();
         }
     }
 }

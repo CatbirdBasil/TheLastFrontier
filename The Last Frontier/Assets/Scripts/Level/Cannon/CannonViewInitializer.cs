@@ -4,7 +4,7 @@ using Zenject;
 
 namespace Level.Cannon.Barrel
 {
-    public class BarrelView : MonoBehaviour
+    public class CannonViewInitializer : MonoBehaviour
     {
         [Inject] private readonly LevelLoader _levelLoader;
 
@@ -20,8 +20,8 @@ namespace Level.Cannon.Barrel
 
         private void OnBarrelLoadingCompleted(object sender, BarrelEventArgs e)
         {
-            gameObject.GetComponent<SpriteRenderer>().sprite = e.BarrelSprite;
-            gameObject.GetComponent<Animator>().runtimeAnimatorController = e.AnimatorController;
+            GameObject barrel = Instantiate(e.BarrelPrefab, transform);
+            barrel.transform.parent = transform;
         }
     }
 }

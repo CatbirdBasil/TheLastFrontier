@@ -1,5 +1,8 @@
 ﻿using Level;
 using Level.Cannon;
+using TLFGameLogic.Model;
+using TLFGameLogic.Model.CannonData.Barrel;
+using TLFUILogic;
 using UnityEngine;
 using Zenject;
 
@@ -13,51 +16,58 @@ public class Shooting : MonoBehaviour
     public Transform firePoint;
     private float timeBeforeNextShot = 0.2f;
 
-    public void OnEnable()
+    private Animator GetShotAnimator()
     {
-        _animator = GetComponentInChildren<Animator>();
+        if (_animator == null)
+        {
+            _animator = GetComponentInChildren<Animator>();
+        }
+
+        return _animator;
     }
 
-    //todo update logic to shoot instantly
+    [Inject] private CannonPartFactory _cannonPartFactory;
+
     private void Update()
     {
         if (Input.touchCount != 0 || Input.GetButton("Fire1"))
         {
-            if (timeBeforeNextShot <= 0)
+            if (!DetectionUtils.IsOnPauseButton(DetectionUtils.GetOnScreenInputPosition()))
             {
-                Shoot();
-                _animator.SetTrigger(ShootTrigger);
-                timeBeforeNextShot = 1f / _playerState.CurrentCannonLoadout.AttackSpeed;
-                Debug.Log(_playerState.CurrentBase);
-            }
-            else
-            {
-                timeBeforeNextShot -= Time.deltaTime;
+                if (timeBeforeNextShot <= 0)
+                {
+                    //TODO REMOVEEE
+                    /*CannonPart part = _cannonPartFactory.GetCommonBoxPart();
+                    if (part is CannonBase)
+                    {
+                        CannonBase cannonBase = part as CannonBase;
+                        Debug.Log("CannonBase: Name = [" + cannonBase.Name + "], Dmg = [" + cannonBase.Damage +
+                                  "], AS = [" + cannonBase.AttackSpeed + "], PS = [" + cannonBase.ProjectileSpeed +
+                                  "], Rang = [" + cannonBase.Rang + "]");
+                    }
+                    else if (part is Barrel)
+                    {
+                        Barrel barrel = part as Barrel;
+                        Debug.Log("Barrel: Name = [" + barrel.Name + "], DmgMult = [" + barrel.DamageMultiplier +
+                                  "], ASMult = [" + barrel.AttackSpeedMultiplier + "], Addit = [" + barrel.AdditionalShotsAmount +
+                                  "], Rang = [" + barrel.Rang + "]");
+                    }*/
+
+                    Shoot();
+                    GetShotAnimator().SetTrigger(ShootTrigger);
+                    timeBeforeNextShot = 1f / _playerState.CurrentCannonLoadout.AttackSpeed;
+                    Debug.Log(_playerState.CurrentBase);
+                }
+                else
+                {
+                    timeBeforeNextShot -= Time.deltaTime;
+                }
             }
         }
         else
         {
             if (timeBeforeNextShot >= 0.1f) timeBeforeNextShot -= Time.deltaTime;
         }
-
-        /*
-        if (timeBeforeNextShot <= 0)
-        {
-            if (Input.touchCount != 0)
-            {
-                Shoot();
-                timeBeforeNextShot = 1f / _playerState.CurrentCannonLoadout.AttackSpeed;
-            }
-            else if (Input.GetButton("Fire1"))
-            {
-                Shoot();
-                timeBeforeNextShot = 1f / _playerState.CurrentCannonLoadout.AttackSpeed;
-            }
-        }
-        else
-        {
-            timeBeforeNextShot -= Time.deltaTime;
-        }*/
     }
 
     private void Shoot()

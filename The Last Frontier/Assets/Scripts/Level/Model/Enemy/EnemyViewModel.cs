@@ -13,20 +13,22 @@ namespace TLFUILogic
 {
     public class EnemyViewModel : MonoBehaviour
     {
-        [Inject] private PlayerState _playerState;
         public Enemy Enemy { get; private set; }
 
         public Rigidbody2D RigidBody { get; set; }
-        
+
         public Animator Animator { get; set; }
 
         private const string AnimatorLethalDamageTriggerName = "Lethal Damage";
         private const string AnimatorSpeedParameterName = "Speed";
         private const string AnimatorAttackTriggerName = "Attack";
+        private const string AnimatorReceiveDamageTriggerName = "Receive Damage";
 
         public bool IsAlive { get; private set; }
 
-        private Base CurrentBase;
+        protected float _timeBeforeNextAttack = 0.2f;
+        
+        private Base _сurrentBase;
 
         public void InitEnemy(Enemy enemy)
         {
@@ -40,42 +42,53 @@ namespace TLFUILogic
             Enemy.LethalDamage -= EnemyOnLethalDamage;
         }
 
-        void Update()
+        void FixedUpdate()
         {
-            if (IsAlive)
+            if (IsAlive && (RigidBody.velocity == Vector2.zero))
             {
-                if (this.transform.position.x > -12)
-                    Move(-12);
+                if (this.transform.position.x > -9.15f)
+                    Move(-9.15f);
                 else
                     Attack();
             }
         }
 
-        public void Move(int target)
+        public void Move(float target)
         {
-            transform.position = Vector2.MoveTowards(transform.position, new Vector2(target,this.transform.position.y), Enemy.Speed*0.01f);
-            
+            RigidBody.MovePosition(new Vector2(transform.position.x - Enemy.Speed * 0.01f, transform.position.y));
         }
 
         public void TakeDamage(float damage)
         {
+            RigidBody.AddForce(transform.right * 0.01f, ForceMode2D.Impulse); // TODO Remove hardcode
+            Animator.SetTrigger(AnimatorReceiveDamageTriggerName);
             Enemy.TakeDamage(damage);
         }
 
-        public void Attack()
+        private void Attack()
         {
-            CurrentBase.TakeDamage(Enemy.Damage);
+            if (_timeBeforeNextAttack <= 0)
+            {
+                Animator.SetTrigger(AnimatorAttackTriggerName);
+                _сurrentBase.TakeDamage(Enemy.Damage);
+                _timeBeforeNextAttack = 1f / Enemy.AttackSpeed;
+            }
+            else
+            {
+                _timeBeforeNextAttack -= Time.deltaTime;
+            }
         }
-        
+
         private void EnemyOnLethalDamage(object sender, EventArgs e)
         {
+            Animator.ResetTrigger(AnimatorReceiveDamageTriggerName);
             IsAlive = false;
             Animator.SetTrigger(AnimatorLethalDamageTriggerName);
         }
 
         public void setBase(Base _base)
         {
-            CurrentBase = _base;
+            _сurrentBase = _base;
         }
     }
 }

@@ -32,8 +32,7 @@ namespace TLFUILogic
             Container.Bind<BulletPrefabResolver>().ToSelf().AsSingle();
             Container.Bind<IBulletFactory>().To<SimpleBulletFactory>().AsSingle();
             
-            Container.Bind<BarrelSpriteResolver>().ToSelf().AsSingle();
-            Container.Bind<BarrelAnimatorControllerResolver>().ToSelf().AsSingle();
+            Container.Bind<BarrelPrefabResolver>().ToSelf().AsSingle();
             Container.Bind<CannonBaseSpriteResolver>().ToSelf().AsSingle();
             
             Container.Bind<CannonPartFactory>().ToSelf().AsSingle();
