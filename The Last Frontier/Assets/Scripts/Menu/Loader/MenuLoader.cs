@@ -34,6 +34,7 @@ public class MenuLoader : ScriptableObject
     public void LoadScene(MenuSceneType sceneType)
     {
         this.SceneType = sceneType;
+
         switch (sceneType)
         {
             case MenuSceneType.Shop:

@@ -9,5 +9,10 @@ namespace TLFGameLogic
         {
             return Levels.Get(level);
         }
+
+        public int GetLevelAmount()
+        {
+            return Levels.GetLevelAmount();
+        }
     }
 }

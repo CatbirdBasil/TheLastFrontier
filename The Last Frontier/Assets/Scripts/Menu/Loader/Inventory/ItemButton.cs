@@ -1,21 +1,28 @@
 ﻿using System;
+using Menu.Loader.Inventory;
 using TLFGameLogic.Model;
 using TLFGameLogic.Model.CannonData.Barrel;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 public class ItemButton : MonoBehaviour
 {
+    //[Inject]  ItemPicturesResolver _resolver;
+    ItemPicturesResolver _resolver = new ItemPicturesResolver();
     public TextMeshProUGUI inventoryText;
     public TextMeshProUGUI inventoryName;
     public Button Item;
     public Image ItemImage;
-    private CannonBase _cannonBase;
-    private Barrel _barrel;
+    public CannonBase _cannonBase { get; private set; }
+    public Barrel _barrel{ get; private set; }
+    private ItemDragHendler _dragHendler;
     
     void Start()
     {
+        _dragHendler =gameObject.AddComponent<ItemDragHendler>(); 
+        _dragHendler.ItemButton = this;
         Item.onClick.AddListener (HandleClick);
     }
 
@@ -25,8 +32,24 @@ public class ItemButton : MonoBehaviour
         _barrel = barrel;
         inventoryName = name;
         inventoryText = text;
+        
     }
-    
+
+    public void SetPicture()
+    {
+        Debug.Log(_barrel);
+        if (_barrel != null)
+        {
+            ItemImage.color = Color.white;
+            ItemImage.sprite = _resolver.GetBarrelImage(_barrel.BarrelType);
+        }
+        else if (_cannonBase != null && _resolver.GetBaseImage(_cannonBase.CannonBaseType) != null)
+        {
+           // Debug.Log(_cannonBase.CannonBaseType);
+            ItemImage.sprite = _resolver.GetBaseImage(_cannonBase.CannonBaseType);
+        }
+    }
+
     public void HandleClick()
     {
         Debug.Log(_cannonBase);
@@ -38,7 +61,8 @@ public class ItemButton : MonoBehaviour
         }
         else if (_barrel != null)
         {
-            //TODO set strings
+            inventoryName.text = "Cannon Barrel";
+            inventoryText.text = GetBarrelInto(_barrel);
         }
 
     }
@@ -55,10 +79,17 @@ public class ItemButton : MonoBehaviour
                "Attack Speed: " + attack;
     }
 
-//    public String GetBarrelInto(Barrel _barrel)
-//    {
-//        
-//    }
+    public String GetBarrelInto(Barrel _barrel)
+    {
+        String type = "Regular barrel";
+        String damageMultiplier = _barrel.DamageMultiplier.ToString();
+        String speed = this._barrel.AttackSpeedMultiplier.ToString();
+        int shoot = _barrel.AdditionalShotsAmount;
+        return "Type: " + type + "\n" 
+               + "Damage multiplier: " + damageMultiplier + "\n" 
+               + "Attack Speed Multiplier: " + speed + "\n" +
+               "Shots Amount: " + (shoot+ 1).ToString();
+    }
 
 
 

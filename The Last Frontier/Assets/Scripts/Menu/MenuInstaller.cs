@@ -1,4 +1,6 @@
 using Menu.Loader;
+using Menu.Loader.Inventory;
+using TLFGameLogic;
 using TLFUILogic;
 using Zenject;
 
@@ -13,6 +15,8 @@ namespace Menu
             Container.Bind<LevelsSceneLoader>().ToSelf().AsSingle();
             Container.Bind<StoreSceneLoader>().ToSelf().AsSingle().NonLazy();
             Container.Bind<FileSaveSystem>().ToSelf().AsSingle().NonLazy();
+            Container.Bind<ItemPicturesResolver>().ToSelf().AsSingle().NonLazy();
+            Container.Bind<ILevelInfoProvider>().To<SimpleLevelInfoProvider>().AsSingle();
         }
     }
 }

@@ -6,6 +6,7 @@ namespace TLFGameLogic.Config
 {
     public class Levels
     {
+        private static int _levelAmount = 1;
         private static LevelInfo Level1()
         {
             var levelInfo = new LevelInfo();
@@ -34,6 +35,11 @@ namespace TLFGameLogic.Config
                 case 1: return Level1();
                 default: return null;
             }
+        }
+
+        public static int GetLevelAmount()
+        {
+            return _levelAmount;
         }
     }
 }

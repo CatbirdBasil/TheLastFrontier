@@ -8,7 +8,7 @@ namespace Menu.Loader
 
         public void LoadScene()
         {
-            GameObject tempObject = GameObject.Find("Store_Canvas");
+            GameObject tempObject = GameObject.Find("Shop_Canvas");
             if (tempObject == null) return;
             ShopCanvas = tempObject.GetComponent<Canvas>();
             if (ShopCanvas == null)
