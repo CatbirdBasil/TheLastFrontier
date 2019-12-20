@@ -10,7 +10,7 @@ using Zenject;
 public class ItemButton : MonoBehaviour
 {
     //[Inject]  ItemPicturesResolver _resolver;
-    ItemPicturesResolver _resolver = new ItemPicturesResolver();
+    private ItemPicturesResolver _resolver;
     public TextMeshProUGUI inventoryText;
     public TextMeshProUGUI inventoryName;
     public Button Item;
@@ -21,18 +21,19 @@ public class ItemButton : MonoBehaviour
     
     void Start()
     {
+        
         _dragHendler =gameObject.AddComponent<ItemDragHendler>(); 
         _dragHendler.ItemButton = this;
         Item.onClick.AddListener (HandleClick);
     }
 
-    public void SetUp(CannonBase cannonBase,Barrel barrel,TextMeshProUGUI name,TextMeshProUGUI text)
+    public void SetUp(CannonBase cannonBase,Barrel barrel,TextMeshProUGUI name,TextMeshProUGUI text,ItemPicturesResolver resolver)
     {
         _cannonBase = cannonBase;
         _barrel = barrel;
         inventoryName = name;
         inventoryText = text;
-        
+        _resolver = resolver;
     }
 
     public void SetPicture()

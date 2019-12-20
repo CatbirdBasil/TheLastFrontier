@@ -21,7 +21,7 @@ namespace Level.PopUps
             Debug.Log("Victory Menu init");
             PlayerData _player = _file.getInfo();
             _player.Level.Add(_levelInfo.Level);
-            _file.saveInfo(_player);
+            //_file.saveInfo(_player);
             //_levelLoader.LevelInfoLoadingCompleted += OnLevelInfoLoadingCompleted;
         }
 
