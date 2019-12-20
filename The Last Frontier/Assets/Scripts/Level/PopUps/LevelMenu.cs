@@ -8,6 +8,7 @@ namespace Level.PopUps
     {
         protected void ChangeScene(int buildIndex, Intent intent, object payload = null)
         {
+            Time.timeScale = 1f;
             IntentHolder.Instance.SetIntent(intent, payload);
             SceneManager.LoadScene(buildIndex);
         }

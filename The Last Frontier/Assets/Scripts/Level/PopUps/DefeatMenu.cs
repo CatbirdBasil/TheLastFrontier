@@ -12,7 +12,7 @@ public class DefeatMenu : LevelMenu
 
     private IEnumerator ReloadLevel()
     {
-        yield return new WaitForSecondsRealtime(0.5f);
+        yield return new WaitForSecondsRealtime(0.1f);
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
