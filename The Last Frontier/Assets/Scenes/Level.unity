@@ -668,7 +668,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 247940619}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1098979279}
+        m_MethodName: OpenShop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &247940619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2432,7 +2443,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dded5ba827dd9504b8a44cbdb1c5869e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 39f5c8b7d35c4084690a95fd949d46a7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3003,7 +3014,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1078295522}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114852320}
+        m_MethodName: OpenShop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1078295522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3824,7 +3846,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1405328661}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114852320}
+        m_MethodName: RunNextLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1405328661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3993,7 +4026,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8d0868cd61cd53f4e83cae6cb174297c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2337bad0eac54b94690ea1dcb61f2a4d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4652,7 +4685,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dded5ba827dd9504b8a44cbdb1c5869e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 39f5c8b7d35c4084690a95fd949d46a7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5262,7 +5295,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2035974098}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1098979279}
+        m_MethodName: OpenShop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2035974098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5276,7 +5320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -5380,7 +5424,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2077624943}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114852320}
+        m_MethodName: OpenMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2077624943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5498,7 +5553,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2083747782}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1321031191}
+        m_MethodName: OpenMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2083747782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5748,16 +5814,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1234134872}
     m_Modifications:
-    - target: {fileID: 7073017180137443303, guid: 987834a743a55db4692004177fd0a335,
-        type: 3}
-      propertyPath: m_Name
-      value: Barrel
-      objectReference: {fileID: 0}
-    - target: {fileID: 7073017180137443303, guid: 987834a743a55db4692004177fd0a335,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7073017180137443302, guid: 987834a743a55db4692004177fd0a335,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5811,6 +5867,16 @@ PrefabInstance:
     - target: {fileID: 7073017180137443302, guid: 987834a743a55db4692004177fd0a335,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7073017180137443303, guid: 987834a743a55db4692004177fd0a335,
+        type: 3}
+      propertyPath: m_Name
+      value: Barrel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7073017180137443303, guid: 987834a743a55db4692004177fd0a335,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

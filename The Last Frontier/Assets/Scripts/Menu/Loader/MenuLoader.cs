@@ -1,20 +1,18 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using Intents;
 using Menu.Loader;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 using Zenject;
 
-public class MenuLoader : ScriptableObject
+public class MenuLoader : MonoBehaviour
 {
+    [Inject] private IntentResolver _intentResolver;
     [Inject] private InventorySceneLoader _inventory;
     [Inject] private LevelsSceneLoader _levels;
     [Inject] private StoreSceneLoader _store;
-    
-    
+
     public MenuSceneType SceneType = MenuSceneType.Inventory;
+
     private void OnEnable()
     {
         Debug.Log("LevelLoader enabled");
@@ -28,12 +26,13 @@ public class MenuLoader : ScriptableObject
 
     private void LoadCurrentMenu(Scene scene, LoadSceneMode mode)
     {
+        _intentResolver.Resolve();
         LoadScene(SceneType);
     }
 
     public void LoadScene(MenuSceneType sceneType)
     {
-        this.SceneType = sceneType;
+        SceneType = sceneType;
 
         switch (sceneType)
         {
@@ -54,26 +53,23 @@ public class MenuLoader : ScriptableObject
         switch (SceneType)
         {
             case MenuSceneType.Shop:
-                SetEnable("Store_Canvas",false);
+                SetEnable("Store_Canvas", false);
                 break;
             case MenuSceneType.Levels:
-                SetEnable("Levels_Canvas",false);
+                SetEnable("Levels_Canvas", false);
                 break;
             case MenuSceneType.Inventory:
-                SetEnable("Inventory_Canvas",false);
+                SetEnable("Inventory_Canvas", false);
                 break;
-        } 
+        }
     }
 
-    public void SetEnable(String objects, bool enable)
+    public void SetEnable(string objects, bool enable)
     {
-        GameObject tempObject = GameObject.Find(objects);
+        var tempObject = GameObject.Find(objects);
         if (tempObject == null) return;
-        Canvas InventoryCanvas = tempObject.GetComponent<Canvas>();
+        var InventoryCanvas = tempObject.GetComponent<Canvas>();
         if (InventoryCanvas != null)
             InventoryCanvas.enabled = enable;
     }
-
-   
-
 }

@@ -1,38 +1,33 @@
-using System;
-using Level.LevelEventArgs;
+using Intents;
 using TLFGameLogic.Model;
 using TLFUILogic;
-using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Zenject;
 
 namespace Level.PopUps
 {
-    public class VictoryMenu : EndScreenMenu
+    public class VictoryMenu : LevelMenu
     {
-        public Text MoneyText;
-
-        [Inject] private LevelLoader _levelLoader;
         [Inject] private FileSaveSystem _file;
         private LevelInfo _levelInfo;
 
-        VictoryMenu()
+        [Inject] private LevelStateManager _levelStateManager;
+        public Text MoneyText;
+
+        private void OnEnable()
         {
-            Debug.Log("Victory Menu init");
-            PlayerData _player = _file.getInfo();
-            _player.Level.Add(_levelInfo.Level);
+            _levelInfo = _levelStateManager.LevelInfo;
+
+            var _player = _file.getInfo();
+            _player.Level.Add(_levelInfo.LevelNumber);
             //_file.saveInfo(_player);
             //_levelLoader.LevelInfoLoadingCompleted += OnLevelInfoLoadingCompleted;
         }
 
-        ~VictoryMenu()
+        public void RunNextLevel()
         {
-            //_levelLoader.LevelInfoLoadingCompleted -= OnLevelInfoLoadingCompleted;
-        }
-
-        private void OnLevelInfoLoadingCompleted(object sender, LevelInfoEventArgs e)
-        {
-            _levelInfo = e.LevelInfo;
+            ChangeScene(SceneManager.GetActiveScene().buildIndex, Intent.LoadLevel, _levelInfo.LevelNumber + 1);
         }
     }
 }

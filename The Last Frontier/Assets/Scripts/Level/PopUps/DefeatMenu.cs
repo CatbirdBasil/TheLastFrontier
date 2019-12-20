@@ -1,10 +1,9 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using Level.PopUps;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DefeatMenu : EndScreenMenu
+public class DefeatMenu : LevelMenu
 {
     public void RetryLevel()
     {

@@ -1,4 +1,4 @@
-namespace Intent
+namespace Intents
 {
     public enum Intent
     {

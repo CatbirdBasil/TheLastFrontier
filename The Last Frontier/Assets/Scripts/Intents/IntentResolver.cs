@@ -1,7 +1,4 @@
-using System;
-using UnityEditor.VersionControl;
-
-namespace Intent
+namespace Intents
 {
     public abstract class IntentResolver
     {
@@ -10,7 +7,7 @@ namespace Intent
             return (T) IntentHolder.Instance.CurrentPayload;
         }
 
-        public abstract void Resolve(Intent intent, Object payload);
+        public abstract void Resolve(Intent intent, object payload);
 
         public void Resolve()
         {

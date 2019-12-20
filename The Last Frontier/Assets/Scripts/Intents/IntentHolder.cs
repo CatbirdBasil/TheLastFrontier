@@ -1,11 +1,8 @@
-using System;
-
-namespace Intent
+namespace Intents
 {
     public class IntentHolder
     {
-        public Intent CurrentIntent { get; private set; }
-        public Object CurrentPayload { get; private set; }
+        private static IntentHolder _instance;
 
         private IntentHolder()
         {
@@ -13,17 +10,16 @@ namespace Intent
             CurrentPayload = null;
         }
 
-        private static IntentHolder _instance;
+        public Intent CurrentIntent { get; private set; }
+        public object CurrentPayload { get; private set; }
+
         public static IntentHolder Instance
         {
             get
             {
-                if (_instance == null)
-                {
-                    _instance = new IntentHolder();
-                }
-            
-                return _instance;  
+                if (_instance == null) _instance = new IntentHolder();
+
+                return _instance;
             }
         }
 
@@ -32,8 +28,8 @@ namespace Intent
             CurrentIntent = intent;
             CurrentPayload = null;
         }
-        
-        public void SetIntent(Intent intent, Object payload)
+
+        public void SetIntent(Intent intent, object payload)
         {
             CurrentIntent = intent;
             CurrentPayload = payload;

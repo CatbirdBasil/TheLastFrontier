@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Intent;
+using Intents;
 using Level.Cannon;
 using Level.Cannon.Barrel;
 using Level.Cannon.Base;
@@ -14,7 +14,7 @@ using UnityEngine.SceneManagement;
 using Zenject;
 
 //TODO Refactor
-public class LevelLoader : ScriptableObject
+public class LevelLoader : MonoBehaviour
 {
     [Inject] private BarrelPrefabResolver _barrelPrefabResolver;
 
@@ -22,9 +22,9 @@ public class LevelLoader : ScriptableObject
     [Inject] private IBulletFactory _bulletFactory;
     [Inject] private CannonBaseSpriteResolver _cannonBaseSpriteResolver;
     [Inject] private IEnemyFactory _enemyFactory;
+    [Inject] private IntentResolver _intentResolver;
     [Inject] private ILevelInfoProvider _levelInfoProvider;
     [Inject] private CurrentCannonLoadoutProvider _loadoutProvider;
-    [Inject] private IntentResolver _intentResolver;
 
     public event EventHandler LoadingCompleted = delegate { };
     public event EventHandler<CurrentCannonLoadoutEventArgs> CurrentCannonLoadoutLoadingCompleted = delegate { };
@@ -47,7 +47,8 @@ public class LevelLoader : ScriptableObject
 
     private void InstantiateLevelData(Scene scene, LoadSceneMode mode)
     {
-        IntentHolder.Instance.SetIntent(Intent.Intent.LoadLevel, 1);
+        if (IntentHolder.Instance.CurrentIntent != Intent.LoadLevel)
+            IntentHolder.Instance.SetIntent(Intent.LoadLevel, 1);
         _intentResolver.Resolve();
         var currentLevel = _intentResolver.GetPayload<int>();
 
@@ -84,6 +85,15 @@ public class LevelLoader : ScriptableObject
     private void LoadLevelInfo(int level)
     {
         var levelInfo = _levelInfoProvider.GetLevel(level);
+
+        if (levelInfo == null)
+        {
+            IntentHolder.Instance.SetIntent(Intent.LoadLevelsMenu);
+            Debug.Log(IntentHolder.Instance.CurrentIntent);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+            return;
+        }
+
         _enemyFactory.WarmUp(levelInfo.EstimatedMaxEnemiesOnScreen);
 
         LevelInfoLoadingCompleted(this, new LevelInfoEventArgs(levelInfo));

@@ -1,21 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Level;
+﻿using Level;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
 public class HealthBar : MonoBehaviour
 {
-    private float maxHealth;
-    private int minHealth = 0;
+    [Inject] private PlayerState _playerState;
     private float CurrHealth;
     public Image heathBar;
+
+    private float maxHealth;
+
     //public  heathBar;
     private float mCurrentValue;
-    [Inject] private PlayerState _playerState;
-    
-    void Start()
+    private int minHealth = 0;
+
+    private void Start()
     {
         maxHealth = _playerState.CurrentBase.MaxHp;
     }
@@ -25,14 +25,14 @@ public class HealthBar : MonoBehaviour
         if (CurrHealth != heath)
         {
             CurrHealth = heath;
-            mCurrentValue =  heath / maxHealth;
+            mCurrentValue = heath / maxHealth;
             heathBar.fillAmount = mCurrentValue;
         }
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        SetHeath(_playerState.CurrentBase.CurrentHp);
+        if (_playerState.CurrentBase != null) SetHeath(_playerState.CurrentBase.CurrentHp);
     }
 }
