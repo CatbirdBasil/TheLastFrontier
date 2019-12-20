@@ -1,3 +1,4 @@
+using Menu.Loader.Inventory;
 using TLFGameLogic.Model;
 using TLFGameLogic.Model.CannonData.Barrel;
 using TLFUILogic;
@@ -12,6 +13,7 @@ namespace Menu.Loader
     {
         public Transform contentPanel;
         [Inject] private FileSaveSystem _file;
+        [Inject] private ItemPicturesResolver _resolver;
         private PlayerData _player;
         public TextMeshProUGUI _inventoryName;
         public TextMeshProUGUI _inventoryText;
@@ -54,14 +56,14 @@ namespace Menu.Loader
             {
                 GameObject button = Instantiate(butt, contentPanel, false); 
                 ItemButton sampleButton =button.GetComponent<ItemButton>();
-                sampleButton.SetUp(_player.BaseCannonFragments[i], null,_inventoryName,_inventoryText);
+                sampleButton.SetUp(_player.BaseCannonFragments[i], null,_inventoryName,_inventoryText,_resolver);
                 sampleButton.SetPicture();
             }
             for (int i = 0; i < _player.Barrels.Count; i++)
             {
                 GameObject button = Instantiate(butt, contentPanel, false); 
                 ItemButton sampleButton =button.GetComponent<ItemButton>();
-                sampleButton.SetUp(null, _player.Barrels[i],_inventoryName,_inventoryText);
+                sampleButton.SetUp(null, _player.Barrels[i],_inventoryName,_inventoryText,_resolver);
                 sampleButton.SetPicture();
             }
         }
