@@ -1,14 +1,16 @@
+using Menu.Loader.Inventory;
+using TLFGameLogic.Model.CannonData.Enum;
 using UnityEngine;
-using UnityEngine.Experimental.UIElements;
+using UnityEngine.UIElements;
 
 namespace Menu.Loader
 {
     public class InventorySceneLoader : MenuSceenLoader
     {
         public Canvas InventoryCanvas { get; set; }
-
+        ItemPicturesResolver _resolver = new ItemPicturesResolver();
         public ScrollView ItemsList { get; set; }
-        
+
 
         public void LoadScene()
         {
@@ -22,8 +24,7 @@ namespace Menu.Loader
             else
             {
                 InventoryCanvas.enabled = true;
-                GameObject items = GameObject.Find("Item_area");
-                if (items == null) return;
+                
             }
         }
     }

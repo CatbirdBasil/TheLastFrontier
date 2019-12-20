@@ -30,9 +30,8 @@ namespace Menu.Loader
             {
                 _player.Barrels.Add(new Barrel());
             }
-           // _file.saveInfo(_player);
-            
-            Debug.Log("KEK");
+            //_file.saveInfo(_player);
+           
             RefreshDisplay ();
         }
 
@@ -49,7 +48,6 @@ namespace Menu.Loader
 
         private void AddButtons()
         {
-            
             GameObject butt = Resources.Load<GameObject>("Prefabs/Menu/Inventory/Item_Button");
             Debug.Log(_player.BaseCannonFragments.Count);
             for (int i = 0; i < _player.BaseCannonFragments.Count; i++)
@@ -57,12 +55,14 @@ namespace Menu.Loader
                 GameObject button = Instantiate(butt, contentPanel, false); 
                 ItemButton sampleButton =button.GetComponent<ItemButton>();
                 sampleButton.SetUp(_player.BaseCannonFragments[i], null,_inventoryName,_inventoryText);
+                sampleButton.SetPicture();
             }
             for (int i = 0; i < _player.Barrels.Count; i++)
             {
                 GameObject button = Instantiate(butt, contentPanel, false); 
                 ItemButton sampleButton =button.GetComponent<ItemButton>();
                 sampleButton.SetUp(null, _player.Barrels[i],_inventoryName,_inventoryText);
+                sampleButton.SetPicture();
             }
         }
     }
