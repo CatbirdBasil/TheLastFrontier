@@ -7,6 +7,7 @@ namespace TLFGameLogic.Model
 {
     public class LevelInfo
     {
+        public int Level;
         public float LevelFinishTime { get; internal set; }
         public Dictionary<EnemyType, int> EstimatedMaxEnemiesOnScreen { get; internal set; }
         public List<float> BigWaveStartTimes { get; internal set; }
