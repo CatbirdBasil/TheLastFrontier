@@ -1,0 +1,1159 @@
+fileFormatVersion: 2
+guid: 9a5f71ff26e7e7744b8d5787ad806d16
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5049958437213204587
+    second: BullDeath_0
+  - first:
+      213: 7329532344471780479
+    second: BullDeath_1
+  - first:
+      213: -3907218882335648704
+    second: BullDeath_2
+  - first:
+      213: 5728497197437668157
+    second: BullDeath_3
+  - first:
+      213: 6227336779216002508
+    second: BullDeath_4
+  - first:
+      213: 1460370330988946440
+    second: BullDeath_5
+  - first:
+      213: -5519261764292168600
+    second: BullDeath_6
+  - first:
+      213: 3826069827575069940
+    second: BullDeath_7
+  - first:
+      213: -1673543510612490467
+    second: BullDeath_8
+  - first:
+      213: 7919953802297803041
+    second: BullDeath_9
+  - first:
+      213: -2596956208762684461
+    second: BullDeath_10
+  - first:
+      213: -8237741759328340387
+    second: BullDeath_11
+  - first:
+      213: 8207933685889437742
+    second: BullDeath_12
+  - first:
+      213: 859442095990427362
+    second: BullDeath_13
+  - first:
+      213: 6790015130541480369
+    second: BullDeath_14
+  - first:
+      213: 6400869699777597124
+    second: BullDeath_15
+  - first:
+      213: 4842425681193537702
+    second: BullDeath_16
+  - first:
+      213: 6935560829434790513
+    second: BullDeath_17
+  - first:
+      213: 7475966627060794191
+    second: BullDeath_18
+  - first:
+      213: 847502985398384877
+    second: BullDeath_19
+  - first:
+      213: 5422074240868942323
+    second: BullDeath_20
+  - first:
+      213: 7484482506678250388
+    second: BullDeath_21
+  - first:
+      213: -7073888734666081923
+    second: BullDeath_22
+  - first:
+      213: 3008552660282835538
+    second: BullDeath_23
+  - first:
+      213: -6224584756194383668
+    second: BullDeath_24
+  - first:
+      213: 3247065346127883902
+    second: BullDeath_25
+  - first:
+      213: -4216819745910395094
+    second: BullDeath_26
+  - first:
+      213: 5316573175224507013
+    second: BullDeath_27
+  - first:
+      213: 4815985602172833671
+    second: BullDeath_28
+  - first:
+      213: -4552894925769791101
+    second: BullDeath_29
+  - first:
+      213: 1614906255220708190
+    second: BullDeath_30
+  - first:
+      213: 2937914795168699885
+    second: BullDeath_31
+  - first:
+      213: 5096602098185438681
+    second: BullDeath_32
+  - first:
+      213: 5653520320607531072
+    second: BullDeath_33
+  - first:
+      213: -5336480780840484731
+    second: BullDeath_34
+  - first:
+      213: 141728938163063883
+    second: BullDeath_35
+  - first:
+      213: 5557118267166150487
+    second: BullDeath_36
+  - first:
+      213: -5899937841923007394
+    second: BullDeath_37
+  - first:
+      213: -8109793247777134089
+    second: BullDeath_38
+  - first:
+      213: 7488871028508879052
+    second: BullDeath_39
+  - first:
+      213: 1367827127480865627
+    second: BullDeath_40
+  - first:
+      213: -6108199676535588585
+    second: BullDeath_41
+  - first:
+      213: -1864581928519206914
+    second: BullDeath_42
+  - first:
+      213: 5467901446138449772
+    second: BullDeath_43
+  - first:
+      213: 2883221569855525137
+    second: BullDeath_44
+  - first:
+      213: 5224231754580577621
+    second: BullDeath_45
+  - first:
+      213: 8884137506824090867
+    second: BullDeath_46
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BullDeath_0
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 1576
+        width: 200
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c54c521831eb45408c858d7ba142571
+      internalID: 5049958437213204587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_1
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 1570
+        width: 208
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e910f191f8f61dc49a22b069943552d9
+      internalID: 7329532344471780479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_2
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 1568
+        width: 216
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f5d840d9946d4246be7ef263b2e94b8
+      internalID: -3907218882335648704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_3
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 1568
+        width: 224
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92595c5d0b6f89e439855c99a6f0a4de
+      internalID: 5728497197437668157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_4
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 1568
+        width: 226
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9e911a01b1d7d54699d8cad393c0af7
+      internalID: 6227336779216002508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_5
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 1568
+        width: 228
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd5e9b75717d8754197b2d7663dab7ab
+      internalID: 1460370330988946440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_7
+      rect:
+        serializedVersion: 2
+        x: 1615
+        y: 1568
+        width: 230
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cca0cc6242e5ca34c8bda3e28b278bf5
+      internalID: 3826069827575069940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_9
+      rect:
+        serializedVersion: 2
+        x: 1880
+        y: 1568
+        width: 230
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a26c885072979d846952df66e48ba430
+      internalID: 7919953802297803041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_11
+      rect:
+        serializedVersion: 2
+        x: 2130
+        y: 1562
+        width: 230
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d08c80eefc0434c46958ede07155c62a
+      internalID: -8237741759328340387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_13
+      rect:
+        serializedVersion: 2
+        x: 2410
+        y: 1556
+        width: 230
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff05404e35a80124b88cee03720f0872
+      internalID: 859442095990427362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_14
+      rect:
+        serializedVersion: 2
+        x: 2687
+        y: 1594
+        width: 88
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef16cc18ef4511f4daa8f8ecf2d3c0df
+      internalID: 6790015130541480369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_15
+      rect:
+        serializedVersion: 2
+        x: 2751
+        y: 1590
+        width: 172
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acdf7631f05b6114e9297bfd6036b619
+      internalID: 6400869699777597124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_16
+      rect:
+        serializedVersion: 2
+        x: 2949
+        y: 1570
+        width: 104
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b60353412b48da84bbb2a102518e46ce
+      internalID: 4842425681193537702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_17
+      rect:
+        serializedVersion: 2
+        x: 3012
+        y: 1588
+        width: 172
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6df28dd68859e8144bea56f2611db483
+      internalID: 6935560829434790513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_18
+      rect:
+        serializedVersion: 2
+        x: 3237
+        y: 1578
+        width: 236
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18f68166bf273a24ba3808b92d53307d
+      internalID: 7475966627060794191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_19
+      rect:
+        serializedVersion: 2
+        x: 2733
+        y: 1570
+        width: 42
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de9ec001a2eb6c4429f4c0e58348671e
+      internalID: 847502985398384877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_20
+      rect:
+        serializedVersion: 2
+        x: 2777
+        y: 1586
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 911a126e12687d847864178ac6b957ac
+      internalID: 5422074240868942323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_21
+      rect:
+        serializedVersion: 2
+        x: 2801
+        y: 1588
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c1ee10d3e6cc5a4d89fc8e41885c1d2
+      internalID: 7484482506678250388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_22
+      rect:
+        serializedVersion: 2
+        x: 2193
+        y: 1572
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86491b2fdba977d43818fcb42d0c2dbd
+      internalID: -7073888734666081923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_23
+      rect:
+        serializedVersion: 2
+        x: 2777
+        y: 1576
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f62f3c397423a4c4aa03581cfd7fedb4
+      internalID: 3008552660282835538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_24
+      rect:
+        serializedVersion: 2
+        x: 3039
+        y: 1576
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4427e798c8327604badba413d140cf34
+      internalID: -6224584756194383668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_25
+      rect:
+        serializedVersion: 2
+        x: 3323
+        y: 1570
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d6958ea663aea499be10acd54ae65c
+      internalID: 3247065346127883902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_26
+      rect:
+        serializedVersion: 2
+        x: 2223
+        y: 1562
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80a4aa9aba00a7348b4ab31e69cc649a
+      internalID: -4216819745910395094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_27
+      rect:
+        serializedVersion: 2
+        x: 2473
+        y: 1564
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c4e45eb8ef9a474f8804fdea3c47d73
+      internalID: 5316573175224507013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_28
+      rect:
+        serializedVersion: 2
+        x: 2499
+        y: 1562
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b34c8ca6b2e1ec4282b7fb526ce35ef
+      internalID: 4815985602172833671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_29
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1338
+        width: 236
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 096778d2082124f45b614f1c5ae037f5
+      internalID: -4552894925769791101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_30
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 1330
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b6221bdb6c54114db0cfd92408f667f
+      internalID: 1614906255220708190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_31
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 1332
+        width: 236
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4a67e5f026c315479ec2d1786e2d471
+      internalID: 2937914795168699885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_32
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 1328
+        width: 240
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bbaf903524fed345a35c3d14315d1f8
+      internalID: 5096602098185438681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_33
+      rect:
+        serializedVersion: 2
+        x: 1097
+        y: 1334
+        width: 240
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b76029be06967f40aeb0838ffce378a
+      internalID: 5653520320607531072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_34
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 1328
+        width: 246
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ce17832858d2b14fa21c6d33b074f0f
+      internalID: -5336480780840484731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_35
+      rect:
+        serializedVersion: 2
+        x: 1669
+        y: 1334
+        width: 248
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c424ad88900d4ca4a98ffb8abec5c157
+      internalID: 141728938163063883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_36
+      rect:
+        serializedVersion: 2
+        x: 1965
+        y: 1328
+        width: 248
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9380c50fcf18bc941b58bb16a52ab24f
+      internalID: 5557118267166150487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_37
+      rect:
+        serializedVersion: 2
+        x: 2259
+        y: 1328
+        width: 252
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3955e2d98cffb04fa8d05662edb71f7
+      internalID: -5899937841923007394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_38
+      rect:
+        serializedVersion: 2
+        x: 2575
+        y: 1332
+        width: 254
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00e1610711bdaf8499ea02cc6956ac19
+      internalID: -8109793247777134089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_39
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 1324
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 766f805e63c8ea7449a72391b47e7f69
+      internalID: 7488871028508879052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_40
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 1320
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e9a0eefc1de43c4dbfeb54eae3ed134
+      internalID: 1367827127480865627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_41
+      rect:
+        serializedVersion: 2
+        x: 1183
+        y: 1326
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 490c8362f88330f499a2be7b455f222e
+      internalID: -6108199676535588585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_42
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 1320
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acd86af563d539e448800bb986bfa56a
+      internalID: -1864581928519206914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_43
+      rect:
+        serializedVersion: 2
+        x: 1757
+        y: 1326
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aabdef5f3ce16743b4f1583a1012fb2
+      internalID: 5467901446138449772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_44
+      rect:
+        serializedVersion: 2
+        x: 2053
+        y: 1320
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b783906efdf0fa344838f44bd0980ccc
+      internalID: 2883221569855525137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_45
+      rect:
+        serializedVersion: 2
+        x: 2347
+        y: 1320
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8368f3a742a9ac4da62a9c4ee80bd73
+      internalID: 5224231754580577621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BullDeath_46
+      rect:
+        serializedVersion: 2
+        x: 2663
+        y: 1324
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff0800c5e32039d44aa39b94879a3e8e
+      internalID: 8884137506824090867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

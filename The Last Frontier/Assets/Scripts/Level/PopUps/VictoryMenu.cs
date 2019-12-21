@@ -18,9 +18,10 @@ namespace Level.PopUps
         private void OnEnable()
         {
             _levelInfo = _levelStateManager.LevelInfo;
-
-            var _player = _file.getInfo();
-            _player.Level.Add(_levelInfo.LevelNumber);
+            MoneyText.text = _levelInfo.Reward.ToString();
+            PlayerData.Instance.Money += _levelInfo.Reward;
+            //var _player = _file.getInfo();
+            // _player.Level.Add(_levelInfo.LevelNumber);
             //_file.saveInfo(_player);
             //_levelLoader.LevelInfoLoadingCompleted += OnLevelInfoLoadingCompleted;
         }

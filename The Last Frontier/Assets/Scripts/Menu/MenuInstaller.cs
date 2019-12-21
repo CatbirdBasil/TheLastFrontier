@@ -2,6 +2,7 @@ using Intents;
 using Menu.Loader;
 using Menu.Loader.Inventory;
 using TLFGameLogic;
+using TLFGameLogic.Model;
 using TLFUILogic;
 using Zenject;
 
@@ -21,6 +22,7 @@ namespace Menu
             Container.Bind<ILevelInfoProvider>().To<SimpleLevelInfoProvider>().AsSingle();
 
             Container.Bind<IntentResolver>().To<MenuIntentResolver>().AsSingle();
+            Container.Bind<CannonPartFactory>().ToSelf().AsSingle();
         }
     }
 }

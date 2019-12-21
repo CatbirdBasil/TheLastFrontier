@@ -31,8 +31,8 @@ namespace TLFGameLogic.Model.CannonData.Config
             public const float DamageMultiplierMinCommon = -0.2f;
             public const float DamageMultiplierMaxCommon = -0.05f;
 
-            public const float AttackSpeedMultiplierMinCommon = 1.07f;
-            public const float AttackSpeedMultiplierMaxCommon = 1.2f;
+            public const float AttackSpeedMultiplierMinCommon = 0.07f;
+            public const float AttackSpeedMultiplierMaxCommon = 0.2f;
 
             public const float DamageMultiplierValueMultiplier = 0.5f;
             public const float AttackSpeedMultiplierValueMultiplier = 2f;

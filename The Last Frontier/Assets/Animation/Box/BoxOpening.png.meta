@@ -1,0 +1,571 @@
+fileFormatVersion: 2
+guid: cabd89e0efd03704098c07e733c15e16
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6018239880715634038
+    second: BoxOpening_0
+  - first:
+      213: 1805537159668244995
+    second: BoxOpening_1
+  - first:
+      213: -5585307416858754663
+    second: BoxOpening_2
+  - first:
+      213: -2250587649230985827
+    second: BoxOpening_3
+  - first:
+      213: 3736718500017890182
+    second: BoxOpening_4
+  - first:
+      213: -1724058175160860348
+    second: BoxOpening_5
+  - first:
+      213: 3921176700794722459
+    second: BoxOpening_6
+  - first:
+      213: 1162748279250838181
+    second: BoxOpening_7
+  - first:
+      213: -5644188348639231219
+    second: BoxOpening_8
+  - first:
+      213: 9131307566165557094
+    second: BoxOpening_9
+  - first:
+      213: 8744421370365909422
+    second: BoxOpening_10
+  - first:
+      213: 3835585121926225255
+    second: BoxOpening_11
+  - first:
+      213: -106583346253276209
+    second: BoxOpening_12
+  - first:
+      213: -2216792123531530785
+    second: BoxOpening_13
+  - first:
+      213: -6502747330693828069
+    second: BoxOpening_14
+  - first:
+      213: -457647116420660866
+    second: BoxOpening_15
+  - first:
+      213: 2338998219888005432
+    second: BoxOpening_16
+  - first:
+      213: 4148675120565406700
+    second: BoxOpening_17
+  - first:
+      213: 2175461318483592469
+    second: BoxOpening_18
+  - first:
+      213: -7210623009501413565
+    second: BoxOpening_19
+  - first:
+      213: -739813296102987081
+    second: BoxOpening_20
+  - first:
+      213: 110229654818171273
+    second: BoxOpening_21
+  - first:
+      213: -3179761830697743951
+    second: BoxOpening_22
+  - first:
+      213: 57910503586367595
+    second: BoxOpening_23
+  - first:
+      213: 5870714683982706909
+    second: BoxOpening_24
+  - first:
+      213: -4289559732891213626
+    second: BoxOpening_25
+  - first:
+      213: 4168605850094035848
+    second: BoxOpening_26
+  - first:
+      213: -8499872622205165695
+    second: BoxOpening_27
+  - first:
+      213: 214891918740332174
+    second: BoxOpening_28
+  - first:
+      213: -4932775178684402126
+    second: BoxOpening_29
+  - first:
+      213: -3314273826877677512
+    second: BoxOpening_30
+  - first:
+      213: -3910110882716293597
+    second: BoxOpening_31
+  - first:
+      213: 420667750993749639
+    second: BoxOpening_32
+  - first:
+      213: 1015193398378995436
+    second: BoxOpening_33
+  - first:
+      213: 7549020999132899158
+    second: BoxOpening_34
+  - first:
+      213: 7079684092894960408
+    second: BoxOpening_35
+  - first:
+      213: 4190319415198763730
+    second: BoxOpening_36
+  - first:
+      213: 3108400126790283101
+    second: BoxOpening_37
+  - first:
+      213: -2730838201734523698
+    second: BoxOpening_38
+  - first:
+      213: 838102062553282045
+    second: BoxOpening_39
+  - first:
+      213: -3910230334336173296
+    second: BoxOpening_40
+  - first:
+      213: -3581555691090117812
+    second: BoxOpening_41
+  - first:
+      213: 2068533345534571389
+    second: BoxOpening_42
+  - first:
+      213: 4259970468435743906
+    second: BoxOpening_43
+  - first:
+      213: 1297936355951745193
+    second: BoxOpening_44
+  - first:
+      213: -1160310180392558638
+    second: BoxOpening_45
+  - first:
+      213: -5723055047504772496
+    second: BoxOpening_46
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BoxOpening_0
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 815
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b068d4857eb88f4a8e539b4896d5bd1
+      internalID: 6018239880715634038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoxOpening_1
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 812
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e4ee51e21486de4aaca42f81a537128
+      internalID: 1805537159668244995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoxOpening_2
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 809
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7017f4050d5fce449b691b2d38827b61
+      internalID: -5585307416858754663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoxOpening_3
+      rect:
+        serializedVersion: 2
+        x: 1229
+        y: 809
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a38952aad5733f246bb739bd97a47f51
+      internalID: -2250587649230985827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoxOpening_4
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 804
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79e61b8a0f05dc944bc974c2ab387528
+      internalID: 3736718500017890182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoxOpening_5
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 494
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac93aa6b5c82c434b9a1fb8149a93ef7
+      internalID: -1724058175160860348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoxOpening_6
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 491
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3620efe7817a01489d6632b483c247b
+      internalID: 3921176700794722459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoxOpening_14
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 455
+        width: 220
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bcfec04c61f28342a0053bb4908a173
+      internalID: -6502747330693828069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoxOpening_27
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 87
+        width: 229
+        height: 228
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 317b7539659f5c042aff79afc2fa7659
+      internalID: -8499872622205165695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoxOpening_31
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 108
+        width: 224
+        height: 213
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7aa1d00e0b711f459aa88a7ba9262d8
+      internalID: -3910110882716293597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoxOpening_43
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 91
+        width: 224
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f11fa2509036f384d815bbecf5780ea5
+      internalID: 4259970468435743906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoxOpening_45
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 97
+        width: 37
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 510be50e4efb54645bc6bcfcb150b54a
+      internalID: -1160310180392558638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoxOpening_7
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 487
+        width: 174
+        height: 175
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d7a8c00715a3224a82273d9a981c0fd
+      internalID: 1162748279250838181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoxOpening_8
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 459
+        width: 212
+        height: 210
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 386f4d00843f7e94d802d0af4af6459f
+      internalID: -5644188348639231219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoxOpening_9
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 87
+        width: 234
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15ed6b9f44aead54199e5fd093041350
+      internalID: 9131307566165557094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using TLFGameLogic.Model;
 using TLFGameLogic.Model.CannonData.Barrel;
-using TLFGameLogic.Model.CannonData.Config;
 
 namespace TLFUILogic
 {
@@ -10,26 +9,20 @@ namespace TLFUILogic
     /// </summary>
     public class PlayerData
     {
-        public List<int> Level { get; set; }
-        public int Money { get; set; }
-        public int SpecialMoney { get; set; }
-        public int CurrentBase { get; set; }
-        public int CurrentBarrel{ get; set; }
-        public List<CannonBase> BaseCannonFragments { get; } //all base in inventory
-        public List<Barrel> Barrels { get; } //all barrels in inventory
-        
+        private static PlayerData _instance;
+
         //default date 
-        public PlayerData()
+        private PlayerData()
         {
             Level = new List<int>();
-            Money = 100;
+            Money = 1000;
             SpecialMoney = 0;
             BaseCannonFragments = new List<CannonBase>();
             Barrels = new List<Barrel>();
-           
+            _instance = this;
         }
 
-        public PlayerData(PlayerDataForSafe data)
+        private PlayerData(PlayerDataForSafe data)
         {
             Level = new List<int>(data.Level);
             Money = data.Money;
@@ -39,31 +32,53 @@ namespace TLFUILogic
             Barrels = getAllBarrelsFromSaveFile(data);
         }
 
+        public List<int> Level { get; set; }
+        public int Money { get; set; }
+        public int SpecialMoney { get; set; }
+        public int CurrentBase { get; set; }
+        public int CurrentBarrel { get; set; }
+        public List<CannonBase> BaseCannonFragments { get; } //all base in inventory
+        public List<Barrel> Barrels { get; } //all barrels in inventory
+
+        public static PlayerData Instance
+        {
+            get
+            {
+                if (_instance == null) _instance = new PlayerData();
+                return _instance;
+            }
+        }
+
+        public static void UpdatePlayerData(PlayerDataForSafe data)
+        {
+            _instance = new PlayerData(data);
+        }
+
+
         public List<CannonBase> getAllBaseFromSaveFile(PlayerDataForSafe data)
         {
-            List<CannonBase> result = new List<CannonBase>();
-            for (int i = 0; i < data.Damages.Length; i++)
+            var result = new List<CannonBase>();
+            for (var i = 0; i < data.Damages.Length; i++)
             {
-                CannonBase cannonBase = new CannonBase(data.Rangs[i],data.Damages[i], data.AttackSpeeds[i],
-                data.ProjectileTypes[i],data.ProjectsSpeed[i],data.CannonBaseTypes[i]);
+                var cannonBase = new CannonBase(data.Rangs[i], data.Damages[i], data.AttackSpeeds[i],
+                    data.ProjectileTypes[i], data.ProjectsSpeed[i], data.CannonBaseTypes[i]);
                 result.Add(cannonBase);
             }
+
             return result;
         }
 
         public List<Barrel> getAllBarrelsFromSaveFile(PlayerDataForSafe data)
         {
-            List<Barrel> result = new List<Barrel>();
-            for (int i = 0; i < data.BarrelTypes.Length; i++)
+            var result = new List<Barrel>();
+            for (var i = 0; i < data.BarrelTypes.Length; i++)
             {
-                Barrel barrel = new Barrel(data.DamageMultipliers[i],data.AttackSpeeds[i],data.AdditionalShotsAmounts[i],
-                    data.BarrelTypes[i],data.BarrelModels[i]);
+                var barrel = new Barrel(data.DamageMultipliers[i], data.AttackSpeeds[i], data.AdditionalShotsAmounts[i],
+                    data.BarrelTypes[i], data.BarrelModels[i]);
                 result.Add(barrel);
             }
+
             return result;
         }
-
     }
-    
-    
 }
